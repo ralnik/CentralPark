@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- controlLayout -->
+    <dimen name="controlLayout_marginLeft">16dp</dimen>
+    <dimen name="controlLayout_marginTop">16dp</dimen>
+
+    <!-- controlButton -->
+    <dimen name="controlButton_margin_between_buttons">10dp</dimen>
+    <dimen name="controlButton_size">21dp</dimen>
+
+    <!-- demonstrationButtonLayout -->
+    <dimen name="demonstrationButtonLayout_rigth">32dp</dimen>
+    <dimen name="demonstrationButtonLayout_left">32dp</dimen>
+    <dimen name="demonstrationButtonLayout_top">42dp</dimen>
+
+    <!-- demonsrationButtons -->
+    <dimen name="demonstrationButton_marginRight_between_buttons">3dp</dimen>
+    <dimen name="demonstrationButton_marginTop_between_buttons">3dp</dimen>
+    <dimen name="demonstrationButton_width">85dp</dimen>
+    <dimen name="demonstrationButton_height">23dp</dimen>
+
+    <!-- tabSheetsLayout -->
+    <dimen name="tabSheetsLayout_marginTop">22dp</dimen>
+    <dimen name="tabSheetsLayout_marginLeft">16dp</dimen>
+    <dimen name="tabSheetsLayout_marginRight">16dp</dimen>
+    <dimen name="tabSheetsLayout_header_heigth">16dp</dimen>
+
+    <!-- filterLayout -->
+    <dimen name="filterLayout_marginTop">50dp</dimen>
+    <dimen name="filterLayout_marginLeft">45dp</dimen>
+    <dimen name="filterLayout_marginRight">45dp</dimen>
+    <dimen name="filterLayout_marginBotton_between_layouts">20dp</dimen>
+
+    <!-- buttonsNumber -->
+    <dimen name="buttonsNumber_width">53dp</dimen>
+    <dimen name="buttonsNumber_height">53dp</dimen>
+    <dimen name="buttonsNumber_margin_between_buttons">17dp</dimen>
+
+    <!-- buttonsSearching -->
+    <dimen name="buttonsSearching_width">172dp</dimen>
+    <dimen name="buttonsSearching_height">48dp</dimen>
+
+</resources>

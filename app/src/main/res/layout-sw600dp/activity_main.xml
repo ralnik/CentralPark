@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/main_background">
+
+    <RelativeLayout
+        android:id="@+id/controlLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/controlLayout_marginTop"
+        android:layout_marginEnd="@dimen/controlLayout_marginLeft"
+        tools:ignore="MissingConstraints">
+
+    <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+        android:id="@+id/buttonPause"
+        android:layout_width="@dimen/controlButton_size"
+        android:layout_height="@dimen/controlButton_size"
+        app:demo_image="@drawable/main_pause_clear"
+        app:demo_image_down="@drawable/main_pause_push"
+        android:layout_marginEnd="@dimen/controlButton_margin_between_buttons"/>
+
+    <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+        android:id="@+id/buttonVolume"
+        android:layout_width="@dimen/controlButton_size"
+        android:layout_height="@dimen/controlButton_size"
+        app:demo_image="@drawable/main_sound_clear"
+        app:demo_image_down="@drawable/main_sound_push"
+        android:layout_toRightOf="@+id/buttonPause"
+        android:layout_marginEnd="@dimen/controlButton_margin_between_buttons"/>
+
+    <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+        android:id="@+id/buttonOption"
+        android:layout_width="@dimen/controlButton_size"
+        android:layout_height="@dimen/controlButton_size"
+        app:demo_image="@drawable/main_options_clear"
+        app:demo_image_down="@drawable/main_options_push"
+        android:layout_toRightOf="@+id/buttonVolume"/>
+
+    </RelativeLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/demonstrationButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/demonstrationButtonLayout_left"
+        android:layout_marginTop="@dimen/demonstrationButtonLayout_top"
+        android:layout_marginRight="@dimen/demonstrationButtonLayout_rigth"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/controlLayout">
+
+        <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+            android:id="@+id/buttonLifeIsland"
+            android:layout_width="@dimen/demonstrationButton_width"
+            android:layout_height="@dimen/demonstrationButton_height"
+            app:demo_image="@drawable/main_01_clear"
+            app:demo_image_down="@drawable/main_01_push"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+            android:id="@+id/buttonLocation"
+            android:layout_width="@dimen/demonstrationButton_width"
+            android:layout_height="@dimen/demonstrationButton_height"
+            android:layout_marginLeft="@dimen/demonstrationButton_marginRight_between_buttons"
+            app:demo_image="@drawable/main_02_clear"
+            app:demo_image_down="@drawable/main_02_push"
+            app:layout_constraintLeft_toRightOf="@+id/buttonLifeIsland"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+            android:id="@+id/buttonInfraRaion"
+            android:layout_width="@dimen/demonstrationButton_width"
+            android:layout_height="@dimen/demonstrationButton_height"
+            android:layout_marginLeft="@dimen/demonstrationButton_marginRight_between_buttons"
+            app:demo_image="@drawable/main_03_clear"
+            app:demo_image_down="@drawable/main_03_push"
+            app:layout_constraintLeft_toRightOf="@+id/buttonLocation"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+            android:id="@+id/buttonPerspective"
+            android:layout_width="@dimen/demonstrationButton_width"
+            android:layout_height="@dimen/demonstrationButton_height"
+            android:layout_marginLeft="@dimen/demonstrationButton_marginRight_between_buttons"
+            app:demo_image="@drawable/main_04_clear"
+            app:demo_image_down="@drawable/main_04_push"
+            app:layout_constraintLeft_toRightOf="@+id/buttonInfraRaion"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+            android:id="@+id/buttonTransport"
+            android:layout_width="@dimen/demonstrationButton_width"
+            android:layout_height="@dimen/demonstrationButton_height"
+            android:layout_marginTop="@dimen/demonstrationButton_marginTop_between_buttons"
+            app:demo_image="@drawable/main_05_clear"
+            app:demo_image_down="@drawable/main_05_push"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonLifeIsland" />
+
+        <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+            android:id="@+id/buttonInfra"
+            android:layout_width="@dimen/demonstrationButton_width"
+            android:layout_height="@dimen/demonstrationButton_height"
+            android:layout_marginLeft="@dimen/demonstrationButton_marginRight_between_buttons"
+            android:layout_marginTop="@dimen/demonstrationButton_marginTop_between_buttons"
+            app:demo_image="@drawable/main_06_clear"
+            app:demo_image_down="@drawable/main_06_push"
+            app:layout_constraintLeft_toRightOf="@+id/buttonTransport"
+            app:layout_constraintTop_toBottomOf="@+id/buttonLocation" />
+
+        <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+            android:id="@+id/buttonComfort"
+            android:layout_width="@dimen/demonstrationButton_width"
+            android:layout_height="@dimen/demonstrationButton_height"
+            android:layout_marginLeft="@dimen/demonstrationButton_marginRight_between_buttons"
+            android:layout_marginTop="@dimen/demonstrationButton_marginTop_between_buttons"
+            app:demo_image="@drawable/main_07_clear"
+            app:demo_image_down="@drawable/main_07_push"
+            app:layout_constraintLeft_toRightOf="@+id/buttonInfra"
+            app:layout_constraintTop_toBottomOf="@+id/buttonInfraRaion" />
+
+        <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+            android:id="@+id/buttonArchitecture"
+            android:layout_width="@dimen/demonstrationButton_width"
+            android:layout_height="@dimen/demonstrationButton_height"
+            android:layout_marginLeft="@dimen/demonstrationButton_marginRight_between_buttons"
+            android:layout_marginTop="@dimen/demonstrationButton_marginTop_between_buttons"
+            app:demo_image="@drawable/main_07_clear"
+            app:demo_image_down="@drawable/main_07_push"
+            app:layout_constraintLeft_toRightOf="@+id/buttonComfort"
+            app:layout_constraintTop_toBottomOf="@+id/buttonPerspective" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/tabSheetsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/demonstrationButtonLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/tabSheetsLayout_marginTop"
+        android:layout_marginLeft="@dimen/tabSheetsLayout_marginLeft"
+        android:layout_marginRight="@dimen/tabSheetsLayout_marginRight">
+
+        <ImageView
+            android:id="@+id/imageSheets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/tab_sheet1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/tabSheetsHeaderLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tabSheetsLayout_header_heigth"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            tools:ignore="MissingConstraints">
+            <FrameLayout
+                android:id="@+id/sheet1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:layout_weight="50">
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/sheet2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:layout_weight="50">
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filterLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/tabSheetsHeaderLinearLayout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginTop="50dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/image_title_korpus"
+                android:layout_marginBottom="@dimen/filterLayout_marginBotton_between_layouts"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/filterLayout_marginBotton_between_layouts">
+                <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+                    android:id="@+id/buttonKorpus1"
+                    android:layout_width="@dimen/buttonsNumber_width"
+                    android:layout_height="@dimen/buttonsNumber_height"
+                    android:layout_marginRight="@dimen/buttonsNumber_margin_between_buttons"
+                    app:demo_image="@drawable/button_01_clear"
+                    app:demo_image_down="@drawable/button_01_push"/>
+                <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+                    android:id="@+id/buttonKorpus2"
+                    android:layout_width="@dimen/buttonsNumber_width"
+                    android:layout_height="@dimen/buttonsNumber_height"
+                    android:layout_marginRight="@dimen/buttonsNumber_margin_between_buttons"
+                    app:demo_image="@drawable/button_02_clear"
+                    app:demo_image_down="@drawable/button_02_push"/>
+                <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+                    android:id="@+id/buttonKorpus3"
+                    android:layout_width="@dimen/buttonsNumber_width"
+                    android:layout_height="@dimen/buttonsNumber_height"
+                    android:layout_marginRight="@dimen/buttonsNumber_margin_between_buttons"
+                    app:demo_image="@drawable/button_03_clear"
+                    app:demo_image_down="@drawable/button_03_push"/>
+                <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+                    android:id="@+id/buttonKorpus4"
+                    android:layout_width="@dimen/buttonsNumber_width"
+                    android:layout_height="@dimen/buttonsNumber_height"
+                    android:layout_marginRight="@dimen/buttonsNumber_margin_between_buttons"
+                    app:demo_image="@drawable/button_04_clear"
+                    app:demo_image_down="@drawable/button_04_push"/>
+                <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+                    android:id="@+id/buttonKorpus5"
+                    android:layout_width="@dimen/buttonsNumber_width"
+                    android:layout_height="@dimen/buttonsNumber_height"
+                    android:layout_marginRight="@dimen/buttonsNumber_margin_between_buttons"
+                    app:demo_image="@drawable/button_05_clear"
+                    app:demo_image_down="@drawable/button_05_push"/>
+                <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+                    android:id="@+id/buttonKorpus6"
+                    android:layout_width="@dimen/buttonsNumber_width"
+                    android:layout_height="@dimen/buttonsNumber_height"
+                    android:layout_marginRight="@dimen/buttonsNumber_margin_between_buttons"
+                    app:demo_image="@drawable/button_06_clear"
+                    app:demo_image_down="@drawable/button_06_push"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/image_title_countrooms"
+                android:layout_marginBottom="@dimen/filterLayout_marginBotton_between_layouts"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/filterLayout_marginBotton_between_layouts">
+                <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+                    android:id="@+id/buttonRoom1"
+                    android:layout_width="@dimen/buttonsNumber_width"
+                    android:layout_height="@dimen/buttonsNumber_height"
+                    android:layout_marginRight="@dimen/buttonsNumber_margin_between_buttons"
+                    app:demo_image="@drawable/button_01_clear"
+                    app:demo_image_down="@drawable/button_01_push"/>
+                <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+                    android:id="@+id/buttonRoom2"
+                    android:layout_width="@dimen/buttonsNumber_width"
+                    android:layout_height="@dimen/buttonsNumber_height"
+                    android:layout_marginRight="@dimen/buttonsNumber_margin_between_buttons"
+                    app:demo_image="@drawable/button_02_clear"
+                    app:demo_image_down="@drawable/button_02_push"/>
+                <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+                    android:id="@+id/buttonRoom3"
+                    android:layout_width="@dimen/buttonsNumber_width"
+                    android:layout_height="@dimen/buttonsNumber_height"
+                    android:layout_marginRight="@dimen/buttonsNumber_margin_between_buttons"
+                    app:demo_image="@drawable/button_03_clear"
+                    app:demo_image_down="@drawable/button_03_push"/>
+                <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+                    android:id="@+id/buttonRoom4"
+                    android:layout_width="@dimen/buttonsNumber_width"
+                    android:layout_height="@dimen/buttonsNumber_height"
+                    android:layout_marginRight="@dimen/buttonsNumber_margin_between_buttons"
+                    app:demo_image="@drawable/button_04_clear"
+                    app:demo_image_down="@drawable/button_04_push"/>
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/image_title_floor"
+                android:layout_marginBottom="@dimen/filterLayout_marginBotton_between_layouts"/>
+
+            <ru.ralnik.myseekbarrange.SeekbarRange
+                android:id="@+id/seekbarFloor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/filterLayout_marginBotton_between_layouts"
+                app:sbr_left_thumb_image="@drawable/image_thumb"
+                app:sbr_right_thumb_image="@drawable/image_thumb"
+                android:background="@drawable/seekbarrange_progress"
+                app:sbr_barColor="@color/colorWhite"
+                app:sbr_barHighlightColor="@color/seekbar_highlight_progress_color"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/image_title_cost"
+                android:layout_marginBottom="@dimen/filterLayout_marginBotton_between_layouts"/>
+
+            <ru.ralnik.myseekbarrange.SeekbarRange
+                android:id="@+id/seekbarCost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/filterLayout_marginBotton_between_layouts"
+                app:sbr_left_thumb_image="@drawable/image_thumb"
+                app:sbr_right_thumb_image="@drawable/image_thumb"
+                android:background="@drawable/seekbarrange_progress"
+                app:sbr_barColor="@color/colorWhite"
+                app:sbr_barHighlightColor="@color/seekbar_highlight_progress_color"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/image_title_square"
+                android:layout_marginBottom="@dimen/filterLayout_marginBotton_between_layouts"/>
+
+            <ru.ralnik.myseekbarrange.SeekbarRange
+                android:id="@+id/seekbarSquare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/filterLayout_marginBotton_between_layouts"
+                app:sbr_left_thumb_image="@drawable/image_thumb"
+                app:sbr_right_thumb_image="@drawable/image_thumb"
+                android:background="@drawable/seekbarrange_progress"
+                app:sbr_barColor="@color/colorWhite"
+                app:sbr_barHighlightColor="@color/seekbar_highlight_progress_color"/>
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+                    android:id="@+id/buttonClear"
+                    android:layout_width="@dimen/buttonsSearching_width"
+                    android:layout_height="@dimen/buttonsSearching_height"
+                    app:demo_image="@drawable/button_clear"
+                    app:demo_image_down="@drawable/button_clear_push"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+                    android:id="@+id/buttonSearch"
+                    android:layout_width="@dimen/buttonsSearching_width"
+                    android:layout_height="@dimen/buttonsSearching_height"
+                    app:demo_image="@drawable/button_search"
+                    app:demo_image_down="@drawable/button_search_push"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+
+
+
+        </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
+
+

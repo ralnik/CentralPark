@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Централ парк</string>
+    <string name="label_countrooms">КОЛИЧЕСТВО КОМНАТ</string>
+    <string name="title_parameters">ПАРАМЕТРЫ</string>
+    <string name="title_corpus">КОРПУС</string>
+    <string name="title_floor">ЭТАЖ</string>
+    <string name="title_cost">ЦЕНА</string>
+    <string name="title_square">ПЛОЩАДЬ (М<sup>2</sup> )</string>
+</resources>
