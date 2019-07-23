@@ -300,16 +300,24 @@
                 android:src="@drawable/image_title_floor"
                 android:layout_marginBottom="@dimen/filterLayout_marginBotton_between_layouts"/>
 
-            <ru.ralnik.myseekbarrange.SeekbarRange
+            <ru.ralnik.myLibrary.CustomSeekbarRange.SeekbarRange
                 android:id="@+id/seekbarFloor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/filterLayout_marginBotton_between_layouts"
+                app:sbr_ThumbLeft_HighlightColor="@drawable/range_min"
+                app:sbr_ThumbRight_HighlightColor="@drawable/range_max"
+                app:sbr_absoluteMaxValue="100"
+                app:sbr_absoluteMinValue="0"
+                app:sbr_barColor="@android:color/transparent"
+                app:sbr_bgEdits="@color/settings_color_edit"
+                app:sbr_bgSeekbarRange="@drawable/seekbarrange_progress"
+                app:sbr_data_type="_integer"
+                app:sbr_edits_ems="5"
                 app:sbr_left_thumb_image="@drawable/image_thumb"
                 app:sbr_right_thumb_image="@drawable/image_thumb"
-                android:background="@drawable/seekbarrange_progress"
-                app:sbr_barColor="@color/colorWhite"
-                app:sbr_barHighlightColor="@color/seekbar_highlight_progress_color"/>
+                app:sbr_textColorOfEdits="@color/colorTextTitle"
+                app:sbr_textSizeOfEdits="8">
+            </ru.ralnik.myLibrary.CustomSeekbarRange.SeekbarRange>
 
             <ImageView
                 android:layout_width="match_parent"
@@ -317,16 +325,24 @@
                 android:src="@drawable/image_title_cost"
                 android:layout_marginBottom="@dimen/filterLayout_marginBotton_between_layouts"/>
 
-            <ru.ralnik.myseekbarrange.SeekbarRange
+            <ru.ralnik.myLibrary.CustomSeekbarRange.SeekbarRange
                 android:id="@+id/seekbarCost"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/filterLayout_marginBotton_between_layouts"
+                app:sbr_ThumbLeft_HighlightColor="@drawable/range_min"
+                app:sbr_ThumbRight_HighlightColor="@drawable/range_max"
+                app:sbr_absoluteMaxValue="100"
+                app:sbr_absoluteMinValue="0"
+                app:sbr_barColor="@android:color/transparent"
+                app:sbr_bgEdits="@color/settings_color_edit"
+                app:sbr_bgSeekbarRange="@drawable/seekbarrange_progress"
+                app:sbr_data_type="_integer"
+                app:sbr_edits_ems="5"
                 app:sbr_left_thumb_image="@drawable/image_thumb"
                 app:sbr_right_thumb_image="@drawable/image_thumb"
-                android:background="@drawable/seekbarrange_progress"
-                app:sbr_barColor="@color/colorWhite"
-                app:sbr_barHighlightColor="@color/seekbar_highlight_progress_color"/>
+                app:sbr_textColorOfEdits="@color/colorTextTitle"
+                app:sbr_textSizeOfEdits="8">
+            </ru.ralnik.myLibrary.CustomSeekbarRange.SeekbarRange>
 
             <ImageView
                 android:layout_width="match_parent"
@@ -334,16 +350,24 @@
                 android:src="@drawable/image_title_square"
                 android:layout_marginBottom="@dimen/filterLayout_marginBotton_between_layouts"/>
 
-            <ru.ralnik.myseekbarrange.SeekbarRange
+            <ru.ralnik.myLibrary.CustomSeekbarRange.SeekbarRange
                 android:id="@+id/seekbarSquare"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/filterLayout_marginBotton_between_layouts"
+                app:sbr_ThumbLeft_HighlightColor="@drawable/range_min"
+                app:sbr_ThumbRight_HighlightColor="@drawable/range_max"
+                app:sbr_absoluteMaxValue="100"
+                app:sbr_absoluteMinValue="0"
+                app:sbr_barColor="@android:color/transparent"
+                app:sbr_bgEdits="@color/settings_color_edit"
+                app:sbr_bgSeekbarRange="@drawable/seekbarrange_progress"
+                app:sbr_data_type="_integer"
+                app:sbr_edits_ems="5"
                 app:sbr_left_thumb_image="@drawable/image_thumb"
                 app:sbr_right_thumb_image="@drawable/image_thumb"
-                android:background="@drawable/seekbarrange_progress"
-                app:sbr_barColor="@color/colorWhite"
-                app:sbr_barHighlightColor="@color/seekbar_highlight_progress_color"/>
+                app:sbr_textColorOfEdits="@color/colorTextTitle"
+                app:sbr_textSizeOfEdits="8">
+            </ru.ralnik.myLibrary.CustomSeekbarRange.SeekbarRange>
 
 
             <android.support.constraint.ConstraintLayout
