@@ -8,8 +8,9 @@
         <attr name="sbr_bgSeekbarRange" format="reference" />
         <attr name="sbr_bgEdits" format="reference" />
         <attr name="sbr_barColor" format="color" />
-        <attr name="sbr_ThumbLeft_HighlightColor" format="reference" />
-        <attr name="sbr_ThumbRight_HighlightColor" format="reference" />
+        <attr name="sbr_barHighlightColor" format="color" />
+        <attr name="sbr_ThumbLeft_HighlightColor" format="reference"/>
+        <attr name="sbr_ThumbRight_HighlightColor" format="reference"/>
         <attr name="sbr_left_thumb_image" format="reference" />
         <attr name="sbr_left_thumb_image_pressed" format="reference" />
         <attr name="sbr_right_thumb_image" format="reference" />
@@ -21,7 +22,6 @@
             <enum name="_float" value="1" />
         </attr>
     </declare-styleable>
-
 
     <declare-styleable name="DemonstrationButton">
         <attr name="demo_image" format="reference" />
