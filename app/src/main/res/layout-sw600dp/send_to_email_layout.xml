@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/send_to_email_background"
+        android:adjustViewBounds="true"/>
+    <TextView
+        android:id="@+id/email_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/sendLayout_marginLeft"
+        android:layout_marginRight="@dimen/sendLayout_marginRight"
+        android:text="ralnik@mail.ru"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/send_to_email_background_edit"
+
+        android:textSize="18sp"
+        android:textAlignment="center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/sendLayout_marginLeft"
+        android:layout_marginRight="@dimen/sendLayout_marginRight"
+        app:layout_goneMarginTop="@dimen/sendLayout_marginTop"
+        android:layout_marginTop="36dp"
+        app:layout_constraintTop_toBottomOf="@id/email_edit">
+       <ImageView
+           android:id="@+id/button_send_to_email"
+           android:layout_width="@dimen/button_send_to_email_width"
+           android:layout_height="@dimen/button_send_to_email_height"
+           android:src="@drawable/button_send_pressed"
+           android:layout_alignParentLeft="true"/>
+
+        <ImageView
+            android:id="@+id/button_back"
+            android:layout_width="@dimen/button_send_to_email_width"
+            android:layout_height="@dimen/button_send_to_email_height"
+            android:src="@drawable/button_back_pressed"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

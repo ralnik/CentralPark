@@ -6,4 +6,22 @@
     <string name="title_floor">ЭТАЖ</string>
     <string name="title_cost">ЦЕНА</string>
     <string name="title_square">ПЛОЩАДЬ (М<sup>2</sup> )</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="settings_title_attention">Смена адреса сервера и пароль влияют на работоспособность всей системы \n
+        Перед внесением изменений рекомендуем связаться с \n
+        системным администратором
+    </string>
+
+    <!-- Title of Table -->
+    <string name="ColumnName_Corpus">КОРПУС</string>
+    <string name="ColumnName_CountRoom">КОЛИЧЕСТВО КОМНАТ</string>
+    <string name="ColumnName_NumberFlat">НОМЕР КВАРТИРЫ</string>
+    <string name="ColumnName_Floor">ЭТАЖ</string>
+    <string name="ColumnName_Square">ПЛОЩАДЬ (М<sup>2</sup> )</string>
+    <string name="ColumnName_Cost">ЦЕНА</string>
+    <string name="ColumnName_Status">СТАТУС</string>
+
+
 </resources>

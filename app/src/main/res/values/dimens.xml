@@ -29,6 +29,7 @@
     <dimen name="filterLayout_marginTop">50dp</dimen>
     <dimen name="filterLayout_marginLeft">45dp</dimen>
     <dimen name="filterLayout_marginRight">45dp</dimen>
+    <dimen name="filterLayout_marginTop_between_layouts">20dp</dimen>
     <dimen name="filterLayout_marginBotton_between_layouts">20dp</dimen>
 
     <!-- buttonsNumber -->
@@ -39,5 +40,22 @@
     <!-- buttonsSearching -->
     <dimen name="buttonsSearching_width">172dp</dimen>
     <dimen name="buttonsSearching_height">48dp</dimen>
+
+    <!--for buttons from send_to_email_layout -->
+    <dimen name="sendLayout_marginLeft">20dp</dimen>
+    <dimen name="sendLayout_marginRight">20dp</dimen>
+    <dimen name="sendLayout_marginTop">18dp</dimen>
+    <dimen name="button_send_to_email_width">86dp</dimen>
+    <dimen name="button_send_to_email_height">24dp</dimen>
+
+    <!-- for ROW-of-Table -->
+    <dimen name="row_height">36dp</dimen>
+    <dimen name="column1_width">78dp</dimen>
+    <dimen name="column2_width">78dp</dimen>
+    <dimen name="column3_width">78dp</dimen>
+    <dimen name="column4_width">114dp</dimen>
+    <dimen name="column5_width">114dp</dimen>
+    <dimen name="column6_width">117dp</dimen>
+    <dimen name="column7_width">111dp</dimen>
 
 </resources>

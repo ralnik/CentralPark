@@ -7,14 +7,14 @@
 </shape>
     </item>
 
-    <item android:height="3dp" android:gravity="center_vertical" android:start="2dp" android:end="2dp" >
+    <item android:height="4dp" android:gravity="center_vertical" android:start="2dp" android:end="2dp" >
         <shape xmlns:android="http://schemas.android.com/apk/res/android"   android:shape="rectangle" >
             <corners android:radius="10dp" />
             <solid android:color="@color/colorWhite" />
         </shape>
     </item>
 
-    <item android:id="@android:id/progress" android:height="7dp" android:gravity="center" >
+    <item android:id="@android:id/progress" android:height="7dp" android:gravity="center">
         <clip>
         <shape xmlns:android="http://schemas.android.com/apk/res/android"   android:shape="rectangle">
             <corners android:radius="10dp" />

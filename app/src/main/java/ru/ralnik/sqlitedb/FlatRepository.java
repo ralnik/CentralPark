@@ -1,9 +1,10 @@
 package ru.ralnik.sqlitedb;
 
-import android.arch.persistence.db.SimpleSQLiteQuery;
 import android.content.Context;
 import android.database.Cursor;
 import android.os.AsyncTask;
+
+import androidx.sqlite.db.SimpleSQLiteQuery;
 
 import java.util.List;
 import java.util.concurrent.ExecutionException;

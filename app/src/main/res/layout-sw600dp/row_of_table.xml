@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/row_height"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/column_1"
+            android:layout_width="@dimen/column1_width"
+            style="@style/myStyleForRowOfTable"
+            android:text="@string/ColumnName_Corpus" />
+
+        <FrameLayout
+
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_border_between_column" />
+
+        <TextView
+            android:id="@+id/column_2"
+            android:layout_width="@dimen/column2_width"
+            style="@style/myStyleForRowOfTable"
+            android:text="@string/ColumnName_NumberFlat" />
+
+        <FrameLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_border_between_column" />
+
+        <TextView
+            android:id="@+id/column_3"
+            android:layout_width="@dimen/column3_width"
+            style="@style/myStyleForRowOfTable"
+            android:text="@string/ColumnName_Floor" />
+
+        <FrameLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_border_between_column" />
+
+        <TextView
+            android:id="@+id/column_4"
+            android:layout_width="@dimen/column4_width"
+            style="@style/myStyleForRowOfTable"
+            android:text="@string/ColumnName_CountRoom" />
+
+        <FrameLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_border_between_column" />
+
+        <TextView
+            android:id="@+id/column_5"
+            android:layout_width="@dimen/column5_width"
+            style="@style/myStyleForRowOfTable"
+            android:text="@string/ColumnName_Square" />
+
+        <FrameLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_border_between_column" />
+
+        <TextView
+            android:id="@+id/column_6"
+            android:layout_width="@dimen/column6_width"
+            style="@style/myStyleForRowOfTable"
+            android:text="@string/ColumnName_Cost" />
+
+        <FrameLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_border_between_column" />
+
+        <TextView
+            android:id="@+id/column_7"
+            android:layout_width="@dimen/column7_width"
+            style="@style/myStyleForRowOfTable"
+            android:text="@string/ColumnName_Status" />
+
+        <FrameLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_border_between_column" />
+    </LinearLayout>
+
+</FrameLayout>

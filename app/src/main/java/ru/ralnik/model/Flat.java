@@ -1,8 +1,8 @@
 package ru.ralnik.model;
-import android.arch.persistence.room.ColumnInfo;
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -49,6 +49,16 @@ public class Flat implements Serializable {
     private String planirovka;          //ссылка на планировку
 
     public Flat(){
+    }
+
+    public Flat(int nom_kv, int corpus, int etag, int comnat, Float ploshad, Float price, int status) {
+        this.nom_kv = nom_kv;
+        this.corpus = corpus;
+        this.etag = etag;
+        this.comnat = comnat;
+        this.ploshad = ploshad;
+        this.price = price;
+        this.status = status;
     }
 
     @NonNull

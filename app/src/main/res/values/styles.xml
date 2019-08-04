@@ -8,4 +8,29 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Style for seekbarRangeAdvance -->
+    <style name="myStyleSeekbarRangeAdvance" >
+        <item name="sbra_barHighlightColor">@color/seekbar_highlight_progress_color</item>
+        <item name="sbra_absoluteMaxValue">100</item>
+        <item name="sbra_absoluteMinValue">0</item>
+        <item name="sbra_bgEdits">@color/settings_color_edit</item>
+        <item name="sbra_bgSeekbarRange">@drawable/seekbarrange_progress</item>
+        <item name="sbra_barColor">@color/barColor</item>
+        <item name="sbra_data_type">_integer</item>
+        <item name="sbra_edits_ems">5</item>
+        <item name="sbra_left_thumb_image">@drawable/image_thumb</item>
+        <item name="sbra_right_thumb_image">@drawable/image_thumb</item>
+        <item name="sbra_textColorOfEdits">@color/colorTextTitle</item>
+        <item name="sbra_textSizeOfEdits">14</item>
+    </style>
+
+    <!-- For ROW_OF_TABLE -->
+    <style name="myStyleForRowOfTable">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_horizontal|center</item>
+        <item name="android:textColor">@color/color_text_header_of_table</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:background">@color/color_header_of_table</item>
+    </style>
+
 </resources>

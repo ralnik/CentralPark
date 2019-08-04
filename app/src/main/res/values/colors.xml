@@ -4,10 +4,24 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
 
     <color name="colorTextTitle">#000000</color>
 
     <!--SeekBar-->
     <color name="seekbar_highlight_progress_color">#5a886c</color>
+    <color name="barColor">#FFFFFF</color>
     <color name="settings_color_edit">#F1F4EB</color>
+
+    <!-- for settings fragment -->
+    <color name="settings_background_edit">#eff4f0</color>
+
+    <!-- for send_to_email_layout -->
+    <color name="send_to_email_background_edit">#eff4f0</color>
+
+    <!-- for row-of-table -->
+    <color name="color_header_of_table">#5b896d</color>
+    <color name="color_text_header_of_table">#FFFFFF</color>
+    <color name="color_text_row_of_table">#000000</color>
+    <color name="color_border_between_column">#5b896d</color>
 </resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GenplanFragment">
+
+        <ImageView
+            android:id="@+id/imageSheets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/tab_sheet2"/>
+
+        <LinearLayout
+            android:id="@+id/tabSheetsHeaderLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tabSheetsLayout_header_heigth"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            tools:ignore="MissingConstraints">
+            <FrameLayout
+                android:id="@+id/sheet1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:layout_weight="50">
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:layout_weight="50">
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filterLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginTop="70dp">
+
+
+        </LinearLayout>
+</FrameLayout>
