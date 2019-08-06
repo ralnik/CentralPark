@@ -6,6 +6,7 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
 
+
     <color name="colorTextTitle">#000000</color>
 
     <!--SeekBar-->
@@ -24,4 +25,7 @@
     <color name="color_text_header_of_table">#FFFFFF</color>
     <color name="color_text_row_of_table">#000000</color>
     <color name="color_border_between_column">#5b896d</color>
+    <color name="color_itemFirstBG_table">#e8eeea</color>
+    <color name="color_itemSecondBG_table">#ffffff</color>
+    <color name="color_itemSelected">#c0d77d</color>
 </resources>

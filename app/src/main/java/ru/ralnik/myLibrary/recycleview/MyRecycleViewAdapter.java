@@ -1,23 +1,29 @@
 package ru.ralnik.myLibrary.recycleview;
 
+import android.content.Context;
+import android.database.Cursor;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import java.util.Collection;
+import java.util.ArrayList;
 import java.util.List;
 
 import ru.ralnik.centralpark.R;
 import ru.ralnik.model.Flat;
 
-public class MyRecycleViewAdapter extends RecyclerView.Adapter<MyRecycleViewAdapter.myViewHolder> {
+public class MyRecycleViewAdapter extends RecyclerView.Adapter<MyRecycleViewAdapter.myViewHolder>{
 
+    private final Context context;
     private List<Flat> flatList;
+    private OnItemClickListener itemClickListener;
 
-    public MyRecycleViewAdapter(List<Flat> flatList) {
+    public MyRecycleViewAdapter(Context context, List<Flat> flatList) {
+        this.context = context;
         this.flatList = flatList;
     }
 
@@ -26,11 +32,13 @@ public class MyRecycleViewAdapter extends RecyclerView.Adapter<MyRecycleViewAdap
     public myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.row_of_table, parent, false);
-        return new myViewHolder(view);
+        final myViewHolder holderView = new myViewHolder(view);
+        return holderView;
     }
 
+
     @Override
-    public void onBindViewHolder(@NonNull myViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final myViewHolder holder, final int position) {
         holder.column_1.setText(flatList.get(position).getCorpus()+"");
         holder.column_2.setText(flatList.get(position).getNom_kv()+"");
         holder.column_3.setText(flatList.get(position).getEtag()+"");
@@ -38,8 +46,28 @@ public class MyRecycleViewAdapter extends RecyclerView.Adapter<MyRecycleViewAdap
         holder.column_5.setText(flatList.get(position).getPloshad().toString());
         holder.column_6.setText(flatList.get(position).getPrice().toString());
         holder.column_7.setText(flatList.get(position).getStatus()+"");
-    }
 
+        for(TextView item: holder.listView) {
+            if (position % 2 == 0) {
+                item.setBackgroundColor(context.getResources().getColor(R.color.color_itemFirstBG_table));
+                item.setTextColor(context.getResources().getColor(R.color.color_text_row_of_table));
+            } else {
+                item.setBackgroundColor(context.getResources().getColor(R.color.color_itemSecondBG_table));
+                item.setTextColor(context.getResources().getColor(R.color.color_text_row_of_table));
+            }
+        }
+        //нужно для чтобы был цвет границ между ячейками таблицы
+        holder.imageBG.setImageLevel(1);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                itemClickListener.onItemClick(holder, position);
+            }
+        });
+
+
+    }
 
     @Override
     public void onAttachedToRecyclerView(RecyclerView recyclerView) {
@@ -52,28 +80,21 @@ public class MyRecycleViewAdapter extends RecyclerView.Adapter<MyRecycleViewAdap
         return flatList.size();
     }
 
-    public void setItems(Collection<Flat> flats) {
-        flatList.addAll(flats);
-        notifyDataSetChanged();
-    }
 
-    public void clearItems() {
-        flatList.clear();
-        notifyDataSetChanged();
+    public void setOnClickListener(OnItemClickListener itemClickListener){
+        this.itemClickListener = itemClickListener;
     }
 
     class myViewHolder extends RecyclerView.ViewHolder {
-
-        // ViewHolder должен содержать переменные для всех
-        // View-компонентов, которым хотим задавать какие-либо свойства
-        // в процессе работы пользователя со списком
-        private TextView column_1;
-        private TextView column_2;
-        private TextView column_3;
-        private TextView column_4;
-        private TextView column_5;
-        private TextView column_6;
-        private TextView column_7;
+        TextView column_1;
+        TextView column_2;
+        TextView column_3;
+        TextView column_4;
+        TextView column_5;
+        TextView column_6;
+        TextView column_7;
+        List<TextView> listView = new ArrayList<>();
+        ImageView imageBG;
 
         public myViewHolder(View itemView) {
             super(itemView);
@@ -84,7 +105,14 @@ public class MyRecycleViewAdapter extends RecyclerView.Adapter<MyRecycleViewAdap
             column_5 = itemView.findViewById(R.id.column_5);
             column_6 = itemView.findViewById(R.id.column_6);
             column_7 = itemView.findViewById(R.id.column_7);
+            imageBG = itemView.findViewById(R.id.imageBG);
+            listView.add(column_1);
+            listView.add(column_2);
+            listView.add(column_3);
+            listView.add(column_4);
+            listView.add(column_5);
+            listView.add(column_6);
+            listView.add(column_7);
         }
-
     }
 }

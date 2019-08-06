@@ -5,7 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <ImageView
+        android:id="@+id/imageBG"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/draw_level"/>
+
     <LinearLayout
+        android:id="@+id/row"
         android:layout_width="match_parent"
         android:layout_height="@dimen/row_height"
         android:orientation="horizontal">
@@ -14,79 +21,78 @@
             android:id="@+id/column_1"
             android:layout_width="@dimen/column1_width"
             style="@style/myStyleForRowOfTable"
-            android:text="@string/ColumnName_Corpus" />
+            android:text="@string/column_1" />
 
         <FrameLayout
-
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="@color/color_border_between_column" />
+            android:background="@android:color/transparent" />
 
         <TextView
             android:id="@+id/column_2"
             android:layout_width="@dimen/column2_width"
             style="@style/myStyleForRowOfTable"
-            android:text="@string/ColumnName_NumberFlat" />
+            android:text="@string/column_2" />
 
         <FrameLayout
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="@color/color_border_between_column" />
+            android:background="@android:color/transparent" />
 
         <TextView
             android:id="@+id/column_3"
             android:layout_width="@dimen/column3_width"
             style="@style/myStyleForRowOfTable"
-            android:text="@string/ColumnName_Floor" />
+            android:text="@string/column_3" />
 
         <FrameLayout
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="@color/color_border_between_column" />
+            android:background="@android:color/transparent" />
 
         <TextView
             android:id="@+id/column_4"
             android:layout_width="@dimen/column4_width"
             style="@style/myStyleForRowOfTable"
-            android:text="@string/ColumnName_CountRoom" />
+            android:text="@string/column_4" />
 
         <FrameLayout
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="@color/color_border_between_column" />
+            android:background="@android:color/transparent" />
 
         <TextView
             android:id="@+id/column_5"
             android:layout_width="@dimen/column5_width"
             style="@style/myStyleForRowOfTable"
-            android:text="@string/ColumnName_Square" />
+            android:text="@string/column_5" />
 
         <FrameLayout
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="@color/color_border_between_column" />
+            android:background="@android:color/transparent" />
 
         <TextView
             android:id="@+id/column_6"
             android:layout_width="@dimen/column6_width"
             style="@style/myStyleForRowOfTable"
-            android:text="@string/ColumnName_Cost" />
+            android:text="@string/column_6" />
 
         <FrameLayout
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="@color/color_border_between_column" />
+            android:background="@android:color/transparent" />
 
         <TextView
             android:id="@+id/column_7"
             android:layout_width="@dimen/column7_width"
             style="@style/myStyleForRowOfTable"
-            android:text="@string/ColumnName_Status" />
+            android:text="@string/column_7" />
 
         <FrameLayout
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="@color/color_border_between_column" />
+            android:background="@android:color/transparent" />
     </LinearLayout>
 
 </FrameLayout>

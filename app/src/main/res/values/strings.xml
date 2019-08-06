@@ -15,13 +15,13 @@
     </string>
 
     <!-- Title of Table -->
-    <string name="ColumnName_Corpus">КОРПУС</string>
-    <string name="ColumnName_CountRoom">КОЛИЧЕСТВО КОМНАТ</string>
-    <string name="ColumnName_NumberFlat">НОМЕР КВАРТИРЫ</string>
-    <string name="ColumnName_Floor">ЭТАЖ</string>
-    <string name="ColumnName_Square">ПЛОЩАДЬ (М<sup>2</sup> )</string>
-    <string name="ColumnName_Cost">ЦЕНА</string>
-    <string name="ColumnName_Status">СТАТУС</string>
+    <string name="column_1">КОРПУС</string>
+    <string name="column_2">№ КВАРТИРЫ</string>
+    <string name="column_3">ЭТАЖ</string>
+    <string name="column_4">КОЛИЧЕСТВО КОМНАТ</string>
+    <string name="column_5">ПЛОЩАДЬ (М<sup>2</sup> )</string>
+    <string name="column_6">ЦЕНА</string>
+    <string name="column_7">СТАТУС</string>
 
 
 </resources>

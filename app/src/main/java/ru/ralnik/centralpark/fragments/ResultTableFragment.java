@@ -16,6 +16,7 @@ import java.util.List;
 import ru.ralnik.centralpark.R;
 import ru.ralnik.model.Flat;
 import ru.ralnik.myLibrary.recycleview.MyRecycleViewAdapter;
+import ru.ralnik.myLibrary.recycleview.MyRecycleViewItemSelected;
 
 
 public class ResultTableFragment extends Fragment {
@@ -48,8 +49,8 @@ public class ResultTableFragment extends Fragment {
                 15.5F,
                 1000001.0F,
                 1));
-        MyRecycleViewAdapter adapter = new MyRecycleViewAdapter(flats);
-
+        MyRecycleViewAdapter adapter = new MyRecycleViewAdapter(getContext(),flats);
+        adapter.setOnClickListener(new MyRecycleViewItemSelected(getContext()));
         LinearLayoutManager llm = new LinearLayoutManager(getContext());
         rv.setLayoutManager(llm);
 
