@@ -32,6 +32,11 @@ public class myConfig {
 
     private String APP_PREF_EMAIL = "email";
 
+    public myConfig(Context context){
+        mSettings = context.getSharedPreferences(APP_PREF_FILE, Context.MODE_PRIVATE);
+        editor = mSettings.edit();
+    }
+
     public String getEmail() {
         if(mSettings.contains(APP_PREF_EMAIL)){
             return mSettings.getString(APP_PREF_EMAIL, "ralnik@mail.ru");
@@ -46,11 +51,6 @@ public class myConfig {
 
     private SharedPreferences mSettings;
     SharedPreferences.Editor editor;
-
-    public myConfig(Context context){
-        mSettings = context.getSharedPreferences(APP_PREF_FILE, Context.MODE_PRIVATE);
-        editor = mSettings.edit();
-    }
 
     public void setMinSquare(float min){
         editor.putFloat(APP_PREF_MINSQUARE,min);

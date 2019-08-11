@@ -28,4 +28,13 @@
     <color name="color_itemFirstBG_table">#e8eeea</color>
     <color name="color_itemSecondBG_table">#ffffff</color>
     <color name="color_itemSelected">#c0d77d</color>
+
+    <!-- for fragment_flat_details -->
+    <color name="color_text_title_flat_details">#5b896d</color>
+    <color name="color_text_flat_details">#000000</color>
+    <color name="color_bottom_border">#b4a8d0</color>
+
+    <!-- for favorite_item -->
+    <color name="color_background_favorite_item">#ebf1ed</color>
+    <color name="color_text_favorite_item">#5b896d</color>
 </resources>

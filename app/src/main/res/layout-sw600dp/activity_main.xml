@@ -66,7 +66,7 @@
             app:demo_image="@drawable/main_01_clear"
             app:demo_image_down="@drawable/main_01_push"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
             android:id="@+id/buttonLocation"
@@ -76,7 +76,7 @@
             app:demo_image="@drawable/main_02_clear"
             app:demo_image_down="@drawable/main_02_push"
             app:layout_constraintLeft_toRightOf="@+id/buttonLifeIsland"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
             android:id="@+id/buttonInfraRaion"
@@ -86,7 +86,7 @@
             app:demo_image="@drawable/main_03_clear"
             app:demo_image_down="@drawable/main_03_push"
             app:layout_constraintLeft_toRightOf="@+id/buttonLocation"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
             android:id="@+id/buttonPerspective"
@@ -96,7 +96,7 @@
             app:demo_image="@drawable/main_04_clear"
             app:demo_image_down="@drawable/main_04_push"
             app:layout_constraintLeft_toRightOf="@+id/buttonInfraRaion"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
             android:id="@+id/buttonTransport"
@@ -106,7 +106,7 @@
             app:demo_image="@drawable/main_05_clear"
             app:demo_image_down="@drawable/main_05_push"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonLifeIsland" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonLifeIsland"/>
 
         <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
             android:id="@+id/buttonInfra"
@@ -117,7 +117,7 @@
             app:demo_image="@drawable/main_06_clear"
             app:demo_image_down="@drawable/main_06_push"
             app:layout_constraintLeft_toRightOf="@+id/buttonTransport"
-            app:layout_constraintTop_toBottomOf="@+id/buttonLocation" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonLocation"/>
 
         <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
             android:id="@+id/buttonComfort"
@@ -128,7 +128,7 @@
             app:demo_image="@drawable/main_07_clear"
             app:demo_image_down="@drawable/main_07_push"
             app:layout_constraintLeft_toRightOf="@+id/buttonInfra"
-            app:layout_constraintTop_toBottomOf="@+id/buttonInfraRaion" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonInfraRaion"/>
 
         <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
             android:id="@+id/buttonArchitecture"
@@ -139,7 +139,7 @@
             app:demo_image="@drawable/main_07_clear"
             app:demo_image_down="@drawable/main_07_push"
             app:layout_constraintLeft_toRightOf="@+id/buttonComfort"
-            app:layout_constraintTop_toBottomOf="@+id/buttonPerspective" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonPerspective"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -24,4 +24,18 @@
     <string name="column_7">СТАТУС</string>
 
 
+    <!-- Type of flat -->
+    <string name="one_bedroom">ОДНОКОМНАТНАЯ КВАРТИРА</string>
+    <string name="two_bedroom">ДВУХКОМНАТНАЯ КВАРТИРА</string>
+    <string name="three_bedroom">ТРЕХКОМНАТНАЯ КВАРТИРА</string>
+    <string name="four_bedroom">ЧЕТЫРЕХКОМНАТНАЯ КВАРТИРА</string>
+    <string name="korpus">КОРПУС</string>
+    <string name="num_flat">№ КВАРТИРЫ</string>
+    <string name="floor">ЭТАЖ</string>
+    <string name="count_room">КОЛИЧЕСТВО КОМНАТ</string>
+    <string name="square">ПЛОЩАДЬ, М<sup>2</sup> </string>
+    <string name="cost">ЦЕНА</string>
+    <string name="status">СТАТУС КВАРТИРЫ</string>
+
+
 </resources>

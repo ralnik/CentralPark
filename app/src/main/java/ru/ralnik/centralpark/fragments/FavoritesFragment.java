@@ -8,8 +8,16 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 
 import ru.ralnik.centralpark.R;
+import ru.ralnik.model.Flat;
 
 public class FavoritesFragment extends Fragment {
+
+    private final Flat flat;
+
+    public FavoritesFragment(Flat flat) {
+        this.flat = flat;
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

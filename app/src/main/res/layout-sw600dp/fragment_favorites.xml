@@ -23,6 +23,41 @@
         android:layout_marginTop="70dp">
 
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="90dp">
+
+        <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+            android:id="@+id/buttonClear"
+            android:layout_width="172dp"
+            android:layout_height="48dp"
+            app:demo_image="@drawable/button_clear"
+            app:demo_image_down="@drawable/button_clear_push"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="45dp"/>
+
+        <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+            android:id="@+id/buttonSendToEmail"
+            android:layout_width="172dp"
+            android:layout_height="48dp"
+            app:demo_image="@drawable/button_sendmail_clear"
+            app:demo_image_down="@drawable/button_sendmail_push"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="45dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </FrameLayout>

@@ -3,17 +3,25 @@ package ru.ralnik.myLibrary.recycleview;
 import android.content.Context;
 import android.widget.TextView;
 
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
 import ru.ralnik.centralpark.R;
+import ru.ralnik.centralpark.fragments.FlatDetailsFragment;
+import ru.ralnik.centralpark.fragments.SettingsFragment;
+import ru.ralnik.centralpark.fragments.TagsFragment;
+import ru.ralnik.model.Flat;
 
 
 public class MyRecycleViewItemSelected implements OnItemClickListener {
 
-    private final Context context;
+    private final FragmentActivity context;
     private static int oldPosition;
     private static MyRecycleViewAdapter.myViewHolder oldHolder;
 
     public MyRecycleViewItemSelected(Context context) {
-        this.context = context;
+        this.context = (FragmentActivity) context;
     }
 
 
@@ -38,5 +46,13 @@ public class MyRecycleViewItemSelected implements OnItemClickListener {
         }
         this.oldHolder = holder;
         this.oldPosition = position;
+
+        FragmentManager fragmentManager = context.getSupportFragmentManager();
+        FragmentTransaction ft = fragmentManager.beginTransaction();
+        FlatDetailsFragment flatDetailsFragment = new FlatDetailsFragment(new Flat());
+
+        ft.replace(R.id.conteiner, flatDetailsFragment, TagsFragment.TAG_5);
+        ft.addToBackStack(null);
+        ft.commit();
     }
 }

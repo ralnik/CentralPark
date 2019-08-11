@@ -4,26 +4,25 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.ImageView;
 
 import androidx.appcompat.widget.AppCompatImageView;
 
 import ru.ralnik.centralpark.R;
 
-public class DemonsrationButton extends AppCompatImageView implements OnClickListener {
+public class DemonsrationButton extends AppCompatImageView  {
 
     private Context context;
     private Drawable demo_image;
     private Drawable demo_image_down;
     private boolean demo_status;
+    private OnDemonstrationButtonClickListener click;
 
     public DemonsrationButton(Context context) {
         super(context);
         this.context = context;
         init(context);
+
     }
 
     public DemonsrationButton(Context context, AttributeSet attrs) {
@@ -48,6 +47,15 @@ public class DemonsrationButton extends AppCompatImageView implements OnClickLis
         }else{
             setBackground(demo_image);
         }
+
+        setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setStatus();
+                if(click != null)
+                    click.onClick(view);
+            }
+        });
     }
 
 
@@ -79,8 +87,9 @@ public class DemonsrationButton extends AppCompatImageView implements OnClickLis
     }
 
 
-    @Override
-    public void onClick(View v) {
-        Log.d("myDebug","OnClick_DemonstrationButton");
+    public void setOnDemonstrationButtonClickListener(OnDemonstrationButtonClickListener click){
+        this.click = click;
     }
+
+
 }

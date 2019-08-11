@@ -1,12 +1,14 @@
 package ru.ralnik.centralpark.fragments;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -20,6 +22,8 @@ import ru.ralnik.myLibrary.recycleview.MyRecycleViewItemSelected;
 
 
 public class ResultTableFragment extends Fragment {
+
+    Context context;
 
     public ResultTableFragment() {
     }
@@ -50,7 +54,7 @@ public class ResultTableFragment extends Fragment {
                 1000001.0F,
                 1));
         MyRecycleViewAdapter adapter = new MyRecycleViewAdapter(getContext(),flats);
-        adapter.setOnClickListener(new MyRecycleViewItemSelected(getContext()));
+        adapter.setOnClickListener(new MyRecycleViewItemSelected(this.context));
         LinearLayoutManager llm = new LinearLayoutManager(getContext());
         rv.setLayoutManager(llm);
 
@@ -58,4 +62,9 @@ public class ResultTableFragment extends Fragment {
         return root;
     }
 
+    @Override
+    public void onAttach(Context context) {
+        this.context = (FragmentActivity) context;
+        super.onAttach(context);
+    }
 }
