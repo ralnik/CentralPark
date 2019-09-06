@@ -16,13 +16,12 @@ import butterknife.ButterKnife;
 import ru.ralnik.centralpark.fragments.TagsFragment;
 import ru.ralnik.centralpark.fragments.FilterFragment;
 import ru.ralnik.centralpark.fragments.SettingsFragment;
+import ru.ralnik.httpPlayer.HttpPlayerFactory;
+import ru.ralnik.httpPlayer.VVVVPlayer;
 import ru.ralnik.myLibrary.NavigationButton.DemonsrationButton;
 import ru.ralnik.myLibrary.NavigationButton.OnDemonstrationButtonClickListener;
 
 public class MainActivity extends AppCompatActivity {
-
-
-
     //UI-Views
     @BindView(R.id.buttonOption) DemonsrationButton buttonSetting;
     @BindView(R.id.buttonPause) DemonsrationButton buttonPause;
@@ -38,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.buttonArchitecture) DemonsrationButton buttonArchitecture;
     @BindViews({R.id.buttonLifeIsland, R.id.buttonLocation, R.id.buttonInfraRaion, R.id.buttonPerspective, R.id.buttonTransport, R.id.buttonInfra,R.id.buttonComfort, R.id.buttonArchitecture}) List<DemonsrationButton> demonsrationButtonList;
 
+    VVVVPlayer vvvv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,18 +47,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+        buttonSetting.setOnClickListener(new buttonSettingsOnClick());
+
         for(DemonsrationButton button : demonsrationButtonList) {
             button.setOnDemonstrationButtonClickListener(new demonstrationButtonsClicks());
         }
 
-//        buttonLifeIsland.setOnDemonstrationButtonClickListener(new OnDemonstrationButtonClickListener() {
-//            @Override
-//            public void onClick() {
-//                Log.d("myDebug", "Получилось сделать!");
-//            }
-//        });
-
         loadMainFragment();
+
+        vvvv = HttpPlayerFactory.getInstance(this).getCommand();
+        vvvv.play();
     }
 
     private void loadMainFragment(){
@@ -70,17 +68,12 @@ public class MainActivity extends AppCompatActivity {
         ft.commit();
     }
 
-    public void buttonSettingsOnClick(View v){
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction ft = fragmentManager.beginTransaction();
-        SettingsFragment settingsFragment = new SettingsFragment();
-
-        ft.add(R.id.conteiner,settingsFragment,TagsFragment.TAG_3);
-        ft.addToBackStack(null);
-        ft.commit();
-    }
-
-    class demonstrationButtonsClicks implements OnDemonstrationButtonClickListener{
+    /**
+     *
+     *  PRIVATE CLASSES of Buttons Listener
+     *
+     */
+    private class demonstrationButtonsClicks implements OnDemonstrationButtonClickListener{
 
         @Override
         public void onClick(View v) {
@@ -90,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
             switch (v.getId()){
                 case R.id.buttonLifeIsland:
                     buttonLifeIsland.setStatus(true);
+
                     Log.d("myDebug", "idTrack = 1");
                     break;
                 case R.id.buttonLocation:
@@ -122,6 +116,20 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
 
+        }
+    }
+
+    private class buttonSettingsOnClick implements View.OnClickListener{
+
+        @Override
+        public void onClick(View v) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction ft = fragmentManager.beginTransaction();
+            SettingsFragment settingsFragment = new SettingsFragment();
+
+            ft.replace(R.id.conteiner,settingsFragment,TagsFragment.TAG_3);
+            ft.addToBackStack(null);
+            ft.commit();
         }
     }
 }

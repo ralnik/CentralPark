@@ -1,21 +1,34 @@
 package ru.ralnik.centralpark.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import ru.ralnik.centralpark.R;
-import ru.ralnik.model.Flat;
+import ru.ralnik.myLibrary.NavigationButton.DemonsrationButton;
+import ru.ralnik.myLibrary.recycleview.FavoriteFlatsRecycleViewAdapter;
+import ru.ralnik.sqlitedb.FlatRepository;
 
 public class FavoritesFragment extends Fragment {
+    @BindView(R.id.recycleviewFavoriteFlat) RecyclerView recyclerView;
+    @BindView(R.id.buttonClear) DemonsrationButton buttonClear;
+    @BindView(R.id.buttonSendToEmail) DemonsrationButton buttonSendToEmail;
 
-    private final Flat flat;
+    private Unbinder unbinder;
+    Context context;
 
-    public FavoritesFragment(Flat flat) {
-        this.flat = flat;
+    public FavoritesFragment() {
     }
 
     @Override
@@ -26,7 +39,39 @@ public class FavoritesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_favorites, container, false);
+        View root = inflater.inflate(R.layout.fragment_favorites, container, false);
+        unbinder = ButterKnife.bind(this, root);
+        loadFavoriteFlatsInRecycleView();
+
+        buttonClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new FlatRepository(context).deleteFavoriteAll();
+                loadFavoriteFlatsInRecycleView();
+            }
+        });
+
+        return root;
     }
+
+    private void loadFavoriteFlatsInRecycleView(){
+        FavoriteFlatsRecycleViewAdapter adapter = new FavoriteFlatsRecycleViewAdapter(getContext(),new FlatRepository(context).getFavoriteFlats());
+        LinearLayoutManager llm = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(llm);
+        recyclerView.setAdapter(adapter);
+    }
+
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
+    }
+    @Override
+    public void onAttach(Context context) {
+        this.context = (FragmentActivity) context;
+        super.onAttach(context);
+    }
+
+
 }

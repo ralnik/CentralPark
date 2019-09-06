@@ -149,9 +149,11 @@
                 android:layout_marginBottom="@dimen/filterLayout_marginBotton_between_layouts"/>
 
             <ru.ralnik.myseekbarrange.SeekbarRangeAdvance
+                android:id="@+id/seekbarFloor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/myStyleSeekbarRangeAdvance" />
+                style="@style/myStyleSeekbarRangeAdvance"
+                app:sbra_data_type="_integer"/>
 
             <ImageView
                 android:layout_width="match_parent"
@@ -161,9 +163,11 @@
                 android:layout_marginTop="@dimen/filterLayout_marginTop_between_layouts"/>
 
             <ru.ralnik.myseekbarrange.SeekbarRangeAdvance
+                android:id="@+id/seekbarCost"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/myStyleSeekbarRangeAdvance"/>
+                style="@style/myStyleSeekbarRangeAdvance"
+                app:sbra_data_type="_double"/>
 
 
             <ImageView
@@ -175,9 +179,11 @@
 
 
             <ru.ralnik.myseekbarrange.SeekbarRangeAdvance
+                android:id="@+id/seekbarSquare"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/myStyleSeekbarRangeAdvance"/>
+                style="@style/myStyleSeekbarRangeAdvance"
+                app:sbra_data_type="_double"/>
 
 
 

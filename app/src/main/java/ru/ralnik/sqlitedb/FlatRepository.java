@@ -18,9 +18,20 @@ public class FlatRepository {
         mFlatDao = db.flatDao();
     }
 
-    public Cursor getFlatsByQuery(String query){
+    public List<Flat> getFlatsByQuery(String query){
         try {
             return new getFlatsByQueryAsyncTask(mFlatDao).execute(query).get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public synchronized List<Flat> getFavoriteFlats(){
+        try {
+            return new getFavoriteFlatsAsyncTask(mFlatDao).execute().get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
@@ -38,6 +49,18 @@ public class FlatRepository {
             }
         }).start();
 
+    }
+
+    public void insertFavorite(String id){
+        new insertFavoriteAsyncTask(mFlatDao).execute(id);
+    }
+
+    public void deleteFavoriteAll(){
+        new deleteAllFavoriteAsyncTask(mFlatDao).execute();
+    }
+
+    public void deleteFavoriteById(String id){
+        new deleteFavoriteByIdAsyncTask(mFlatDao).execute(id);
     }
 
     public void update(Flat flat){
@@ -119,14 +142,28 @@ public class FlatRepository {
     }
 
     //************--------============ PUBLIC CLASSES ==========-------------------*****************//
-    public class getFlatsByQueryAsyncTask extends AsyncTask<String,Void, Cursor>{
+
+    public class getFavoriteFlatsAsyncTask extends AsyncTask<String,Void, List<Flat>>{
+        private FlatDao mAsyncFlatDao;
+        public getFavoriteFlatsAsyncTask(FlatDao mAsyncFlatDao) {
+            this.mAsyncFlatDao = mAsyncFlatDao;
+        }
+
+        @Override
+        protected List<Flat> doInBackground(String... param) {
+            return mAsyncFlatDao.getFavoriteFlats();
+        }
+    }
+
+
+    public class getFlatsByQueryAsyncTask extends AsyncTask<String,Void, List<Flat>>{
         private FlatDao mAsyncFlatDao;
         public getFlatsByQueryAsyncTask(FlatDao mAsyncFlatDao) {
             this.mAsyncFlatDao = mAsyncFlatDao;
         }
 
         @Override
-        protected Cursor doInBackground(String... param) {
+        protected List<Flat> doInBackground(String... param) {
             SimpleSQLiteQuery query = new SimpleSQLiteQuery(param[0]);
             return mAsyncFlatDao.getFlatsByQuery(query);
         }
@@ -204,6 +241,20 @@ public class FlatRepository {
         @Override
         protected Void doInBackground(final Flat... param) {
             mAsyncFlatDao.insertAll(param);
+            return null;
+        }
+    }
+
+    public class insertFavoriteAsyncTask extends AsyncTask<String, Void, Void>{
+        private FlatDao mAsyncFlatDao;
+
+        public insertFavoriteAsyncTask(FlatDao mAsyncFlatDao) {
+            this.mAsyncFlatDao = mAsyncFlatDao;
+        }
+
+        @Override
+        protected Void doInBackground(final String... id) {
+            mAsyncFlatDao.insertFavorite(id[0]);
             return null;
         }
     }
@@ -287,6 +338,20 @@ public class FlatRepository {
         }
     }
 
+    private class deleteFavoriteByIdAsyncTask extends AsyncTask<String, Void, Void>{
+        private FlatDao mAsyncFlatDao;
+
+        public deleteFavoriteByIdAsyncTask(FlatDao mAsyncFlatDao) {
+            this.mAsyncFlatDao = mAsyncFlatDao;
+        }
+
+        @Override
+        protected Void doInBackground(String... param) {
+            this.mAsyncFlatDao.deleteFavoriteById(param[0]);
+            return null;
+        }
+    }
+
     private class deleteAllAsyncTask extends AsyncTask<Void,Void,Void>{
         private FlatDao mAsyncFlatDao;
 
@@ -296,6 +361,19 @@ public class FlatRepository {
         @Override
         protected Void doInBackground(Void... voids) {
             this.mAsyncFlatDao.deleteAll();
+            return null;
+        }
+    }
+
+    public static class deleteAllFavoriteAsyncTask extends AsyncTask<Void, Void, Void> {
+        private FlatDao mAsyncFlatDao;
+
+        public deleteAllFavoriteAsyncTask(FlatDao mAsyncFlatDao) {
+            this.mAsyncFlatDao = mAsyncFlatDao;
+        }
+        @Override
+        protected Void doInBackground(Void... params) {
+            mAsyncFlatDao.deleteAllFavorite();
             return null;
         }
     }

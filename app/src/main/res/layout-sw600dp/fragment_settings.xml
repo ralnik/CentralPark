@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".SettingsFragment">
 
     <ImageView
@@ -14,31 +14,9 @@
         android:scaleType="centerInside"
         android:src="@drawable/settings_background"/>
 
-    <LinearLayout
-        android:id="@+id/tabSheetsHeaderLinearLayout"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/tabSheetsLayout_header_heigth"
-        android:orientation="horizontal"
-        android:weightSum="100"
-        tools:ignore="MissingConstraints">
-        <FrameLayout
-            android:id="@+id/sheet1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@android:color/transparent"
-            android:layout_weight="50">
-        </FrameLayout>
-        <FrameLayout
-            android:id="@+id/sheet2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@android:color/transparent"
-            android:layout_weight="50">
-        </FrameLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_marginLeft="45dp"
         android:layout_marginRight="45dp"
@@ -47,47 +25,55 @@
         <TextView
             android:id="@+id/txtMusic"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="18dp"
+            android:layout_height="0dp"
             android:text="МУЗЫКА"
             android:textSize="14sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintTop_toTopOf="parent"
+            />
 
         <SeekBar
             android:id="@+id/musicSeekBar"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginTop="18dp"
             android:max="100"
             android:progress="50"
             android:progressDrawable="@drawable/seekbarrange_progress"
-            android:thumb="@drawable/image_thumb" />
+            android:thumb="@drawable/image_thumb"
+            app:layout_constraintTop_toBottomOf="@+id/txtMusic"/>
 
         <TextView
             android:id="@+id/txtEffects"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="18dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="40dp"
             android:text="ЭФФЕКТЫ"
             android:textSize="14sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintTop_toBottomOf="@+id/musicSeekBar"/>
 
         <SeekBar
             android:id="@+id/effectSeekBar"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginTop="18dp"
             android:max="100"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
             android:progressDrawable="@drawable/seekbarrange_progress"
-            android:thumb="@drawable/image_thumb" />
+            android:thumb="@drawable/image_thumb"
+            app:layout_constraintTop_toBottomOf="@+id/txtEffects"/>
 
         <RelativeLayout
+            android:id="@+id/timeWaitLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="91dp"
-            android:orientation="horizontal">
+            android:layout_height="0dp"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/effectSeekBar">
 
             <TextView
                 android:id="@+id/title_timewait"
@@ -97,7 +83,8 @@
                 android:layout_marginEnd="12dp"
                 android:text="ВРЕМЯ ОЖИДАНИЯ"
                 android:textSize="14sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"/>
 
             <EditText
                 android:id="@+id/editWaitTime"
@@ -123,40 +110,46 @@
                 android:layout_toRightOf="@id/editWaitTime"/>
 
 
-            <ImageView
+            <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
                 android:id="@+id/switcherTimer"
                 android:layout_width="102dp"
                 android:layout_height="27dp"
-                app:srcCompat="@drawable/button_wait_on"
-                android:layout_alignParentRight="true"/>
+                app:demo_image="@drawable/button_wait_on"
+                app:demo_image_down="@drawable/button_wait_off"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/colorBlack"/>
         </RelativeLayout>
 
         <TextView
             android:id="@+id/txtAttention"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="18dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="91dp"
             android:gravity="center"
             android:text="ВНИМАНИЕ"
             android:textColor="@color/colorBlack"
             android:textSize="14sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/timeWaitLayout"/>
 
         <TextView
             android:id="@+id/textAttention"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="18dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="18dp"
             android:gravity="center"
             android:text="@string/settings_title_attention"
             android:textColor="@color/colorBlack"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/txtAttention"/>
 
         <LinearLayout
+            android:id="@+id/serverIPLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="220dp"
-            android:orientation="horizontal">
+            android:layout_height="0dp"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/textAttention">
 
             <TextView
                 android:id="@+id/textView9"
@@ -183,11 +176,16 @@
         </LinearLayout>
 
         <RelativeLayout
+            android:id="@+id/footer"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"            >
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
 
             <ImageView
-                android:id="@+id/btnSave"
+                android:id="@+id/buttonSave"
                 android:layout_width="177dp"
                 android:layout_height="42dp"
                 android:layout_weight="1"
@@ -195,7 +193,7 @@
                 android:layout_alignParentLeft="true"/>
 
             <ImageView
-                android:id="@+id/btnUpdateDB"
+                android:id="@+id/buttonUpdateDB"
                 android:layout_width="177dp"
                 android:layout_height="42dp"
                 android:layout_weight="1"
@@ -203,6 +201,6 @@
                 android:layout_alignParentRight="true"/>
         </RelativeLayout>
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

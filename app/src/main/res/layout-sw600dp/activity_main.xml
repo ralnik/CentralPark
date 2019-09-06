@@ -41,7 +41,6 @@
         android:id="@+id/buttonOption"
         android:layout_width="@dimen/controlButton_size"
         android:layout_height="@dimen/controlButton_size"
-        android:onClick="buttonSettingsOnClick"
         app:demo_image="@drawable/main_options_clear"
         app:demo_image_down="@drawable/main_options_push"
         android:layout_toRightOf="@+id/buttonVolume"/>

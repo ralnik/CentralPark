@@ -23,7 +23,7 @@ public abstract class AppDatabase extends RoomDatabase {
             synchronized (AppDatabase.class) {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                            AppDatabase.class, "wing.db")
+                            AppDatabase.class, "CentralPark.db")
                             //.allowMainThreadQueries()
                             .addCallback(sRoomDatabaseCallback)
                             .build();
@@ -45,7 +45,6 @@ public abstract class AppDatabase extends RoomDatabase {
             // If you want to keep the data through app restarts,
             // comment out the following line.
             //new PopulateDbAsync(INSTANCE).execute();
-
         }
 
     };

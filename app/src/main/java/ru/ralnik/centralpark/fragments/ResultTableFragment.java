@@ -19,13 +19,16 @@ import ru.ralnik.centralpark.R;
 import ru.ralnik.model.Flat;
 import ru.ralnik.myLibrary.recycleview.MyRecycleViewAdapter;
 import ru.ralnik.myLibrary.recycleview.MyRecycleViewItemSelected;
+import ru.ralnik.sqlitedb.FlatRepository;
 
 
 public class ResultTableFragment extends Fragment {
 
+    private String sql;
     Context context;
 
-    public ResultTableFragment() {
+    public ResultTableFragment(String sql) {
+        this.sql = sql;
     }
 
     @Override
@@ -38,22 +41,8 @@ public class ResultTableFragment extends Fragment {
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_result_table, container, false);
         RecyclerView rv = (RecyclerView) root.findViewById(R.id.recycleview);
-        List<Flat> flats = new ArrayList<>();
-        flats.add(new Flat(17,
-                2,
-                3,
-                2,
-                15.5F,
-                1000000.0F,
-                1));
-        flats.add(new Flat(18,
-                2,
-                3,
-                3,
-                15.5F,
-                1000001.0F,
-                1));
-        MyRecycleViewAdapter adapter = new MyRecycleViewAdapter(getContext(),flats);
+
+        MyRecycleViewAdapter adapter = new MyRecycleViewAdapter(getContext(),new FlatRepository(context).getFlatsByQuery(sql));
         adapter.setOnClickListener(new MyRecycleViewItemSelected(this.context));
         LinearLayoutManager llm = new LinearLayoutManager(getContext());
         rv.setLayoutManager(llm);

@@ -2,7 +2,7 @@ package ru.ralnik.httpPlayer;
 
 import ru.ralnik.model.Flat;
 
-public class VVVVPlayer extends HttpPlayer implements PlayerCommands {
+public class VVVVPlayer extends HttpPlayer {
 
     private int playStop = 0;
     private int volumeOnOff = 1;
@@ -12,7 +12,6 @@ public class VVVVPlayer extends HttpPlayer implements PlayerCommands {
     private int numberTrack;
     private int numberSubTrack;
     private Flat flat = null;
-
 
     public VVVVPlayer(String host) {
         super(host);
@@ -32,13 +31,8 @@ public class VVVVPlayer extends HttpPlayer implements PlayerCommands {
     }
 
     @Override
-    public void setVolEffect(int volEffect) {
+    public void setVolumeEffect(int volEffect) {
         this.volEffect = volEffect;
-    }
-
-    @Override
-    public void changeHost(String host) {
-        setHost(host);
     }
 
     @Override
@@ -46,9 +40,6 @@ public class VVVVPlayer extends HttpPlayer implements PlayerCommands {
         this.playStop = 1;
         super.executeCommand(getFullLink());
     }
-
-    @Override
-    public void pause() {}
 
     @Override
     public void stop() {
@@ -78,7 +69,7 @@ public class VVVVPlayer extends HttpPlayer implements PlayerCommands {
     }
 
     @Override
-    public void volEffect(int vol) {
+    public void volumeEffect(int vol) {
         this.volEffect = vol;
         super.executeCommand(getFullLink());
     }
@@ -89,31 +80,6 @@ public class VVVVPlayer extends HttpPlayer implements PlayerCommands {
         super.executeCommand(getFullLink());
     }
 
-    @Override
-    public void toggleLoop() {}
-
-    @Override
-    public void repeat() {}
-
-    @Override
-    public void random() {}
-
-    @Override
-    public void nextTrack() {}
-
-    @Override
-    public void previousTrack() {}
-
-    @Override
-    public void fullscreen() {}
-
-    @Override
-    public void playlistEmpty() {}
-
-    @Override
-    public void deleteById(int id) {}
-
-    @Override
     public void setFlatInfo(Flat flat){
         this.flat = flat;
     }

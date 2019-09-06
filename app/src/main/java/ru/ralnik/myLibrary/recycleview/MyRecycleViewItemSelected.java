@@ -11,7 +11,9 @@ import ru.ralnik.centralpark.R;
 import ru.ralnik.centralpark.fragments.FlatDetailsFragment;
 import ru.ralnik.centralpark.fragments.SettingsFragment;
 import ru.ralnik.centralpark.fragments.TagsFragment;
+import ru.ralnik.httpPlayer.HttpPlayerFactory;
 import ru.ralnik.model.Flat;
+import ru.ralnik.sqlitedb.FlatRepository;
 
 
 public class MyRecycleViewItemSelected implements OnItemClickListener {
@@ -26,7 +28,7 @@ public class MyRecycleViewItemSelected implements OnItemClickListener {
 
 
     @Override
-    public void onItemClick(MyRecycleViewAdapter.myViewHolder holder, int position) {
+    public void onItemClick(MyRecycleViewAdapter.myViewHolder holder, int position, String ID) {
         if(oldHolder != null) {
             for (TextView item : oldHolder.listView) {
                 if (oldPosition % 2 == 0) {
@@ -49,7 +51,13 @@ public class MyRecycleViewItemSelected implements OnItemClickListener {
 
         FragmentManager fragmentManager = context.getSupportFragmentManager();
         FragmentTransaction ft = fragmentManager.beginTransaction();
-        FlatDetailsFragment flatDetailsFragment = new FlatDetailsFragment(new Flat());
+
+        Flat flat = new FlatRepository(context).findById(ID);
+
+        HttpPlayerFactory.getInstance(context).getCommand().setFlatInfo(flat);
+        HttpPlayerFactory.getInstance(context).getCommand().selectById(8);
+
+        FlatDetailsFragment flatDetailsFragment = new FlatDetailsFragment(flat);
 
         ft.replace(R.id.conteiner, flatDetailsFragment, TagsFragment.TAG_5);
         ft.addToBackStack(null);

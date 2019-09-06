@@ -19,12 +19,12 @@ import ru.ralnik.model.Flat;
 public class MyRecycleViewAdapter extends RecyclerView.Adapter<MyRecycleViewAdapter.myViewHolder>{
 
     private final Context context;
-    private List<Flat> flatList;
+    private List<Flat> listFlat;
     private OnItemClickListener itemClickListener;
 
-    public MyRecycleViewAdapter(Context context, List<Flat> flatList) {
+    public MyRecycleViewAdapter(Context context, List<Flat> listFlat) {
         this.context = context;
-        this.flatList = flatList;
+        this.listFlat = listFlat;
     }
 
     @NonNull
@@ -39,13 +39,14 @@ public class MyRecycleViewAdapter extends RecyclerView.Adapter<MyRecycleViewAdap
 
     @Override
     public void onBindViewHolder(@NonNull final myViewHolder holder, final int position) {
-        holder.column_1.setText(flatList.get(position).getCorpus()+"");
-        holder.column_2.setText(flatList.get(position).getNom_kv()+"");
-        holder.column_3.setText(flatList.get(position).getEtag()+"");
-        holder.column_4.setText(flatList.get(position).getComnat()+"");
-        holder.column_5.setText(flatList.get(position).getPloshad().toString());
-        holder.column_6.setText(flatList.get(position).getPrice().toString());
-        holder.column_7.setText(flatList.get(position).getStatus()+"");
+
+        holder.column_1.setText(listFlat.get(position).getCorpus() + "");
+        holder.column_2.setText(listFlat.get(position).getNom_kv() + "");
+        holder.column_3.setText(listFlat.get(position).getEtag() + "");
+        holder.column_4.setText(listFlat.get(position).getComnat() + "");
+        holder.column_5.setText(listFlat.get(position).getPloshad() + "");
+        holder.column_6.setText(listFlat.get(position).getPrice() + "");
+        holder.column_7.setText(listFlat.get(position).getStatus() + "");
 
         for(TextView item: holder.listView) {
             if (position % 2 == 0) {
@@ -62,7 +63,7 @@ public class MyRecycleViewAdapter extends RecyclerView.Adapter<MyRecycleViewAdap
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                itemClickListener.onItemClick(holder, position);
+                itemClickListener.onItemClick(holder, position, listFlat.get(position).getId());
             }
         });
 
@@ -77,7 +78,7 @@ public class MyRecycleViewAdapter extends RecyclerView.Adapter<MyRecycleViewAdap
 
     @Override
     public int getItemCount() {
-        return flatList.size();
+        return listFlat.size();
     }
 
 

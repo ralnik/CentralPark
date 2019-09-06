@@ -37,6 +37,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/ll_details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -49,6 +50,7 @@
             android:layout_height="wrap_content">
             
             <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
+                android:id="@+id/buttonStar"
                 android:layout_width="37dp"
                 android:layout_height="37dp"
                 app:demo_image="@drawable/button_star_clear"

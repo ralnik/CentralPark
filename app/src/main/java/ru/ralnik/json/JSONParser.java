@@ -17,6 +17,7 @@ import java.util.List;
 
 import ru.ralnik.model.Flat;
 import ru.ralnik.sqlitedb.AppDatabase;
+import ru.ralnik.sqlitedb.FlatRepository;
 
 
 public class JSONParser {
@@ -26,13 +27,9 @@ public class JSONParser {
     public JSONParser(Context context, String url) {
         this.url = url;
         this.context = context;
-        parser();
     }
 
-    private synchronized void parser() {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
+    public boolean parser() {
                 HttpURLConnection urlConnection = null;
                 BufferedReader reader = null;
                 AppDatabase db = AppDatabase.getInstance(context);
@@ -54,11 +51,10 @@ public class JSONParser {
 //                        }
 
                         for (Flat flat : flats) {
-                           // new FlatRepository(context).insert(flat);
+                            //new FlatRepository(context).insert(flat);
                             db.flatDao().insert(flat);
                         }
-
-                        //Log.d("myDebug", "server connected");
+                     //   Log.d("myDebug", "server connected");
                     }
 
                 } catch (MalformedURLException e) {
@@ -79,10 +75,9 @@ public class JSONParser {
                     if(urlConnection != null){
                         urlConnection.disconnect();
                     }
-                    //Log.d("myDebug","finish");
+                   // Log.d("myDebug","finish");
                 }
-            }
-        }).start();
+                return true;
     }
 
 

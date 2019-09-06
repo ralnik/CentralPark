@@ -16,7 +16,7 @@ import ru.ralnik.model.Flat;
 @Dao
 public interface FlatDao {
     @RawQuery
-   Cursor getFlatsByQuery(SupportSQLiteQuery query);
+   List<Flat> getFlatsByQuery(SupportSQLiteQuery query);
 
     @Query("SELECT * FROM flats")
     List<Flat> getAll();
@@ -79,4 +79,19 @@ public interface FlatDao {
 
     @Query("UPDATE flats set _id = :id, nom_kv = :nom_kv, corpus = :corpus, etag = :etag, comnat = :comnat, ploshad = :ploshad, price = :price, status = :status, planirovka = :planirovka")
     void update(String id, int nom_kv, int corpus, int etag, int comnat, Float ploshad, Float price, int status, String planirovka);
+
+//***
+//*************для избранного**************
+//***
+    @Query("UPDATE flats set favorite=1 where _id = :id")
+    void insertFavorite(String id);
+
+    @Query("UPDATE flats set favorite=0 where favorite=1")
+    void deleteAllFavorite();
+
+    @Query("UPDATE flats set favorite=0 where _id = :id")
+    void deleteFavoriteById(String id);
+
+    @Query("SELECT * FROM flats WHERE favorite=1")
+    List<Flat> getFavoriteFlats();
  }

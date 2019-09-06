@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Введите пароль: "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+
+    <EditText
+        android:id="@+id/input_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/tv">
+    </EditText>
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/input_text"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Отмена"
+        style="@style/Widget.AppCompat.Light.ActionButton"/>
+
+    <Button
+        android:id="@+id/buttonApply"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/input_text"
+        app:layout_constraintRight_toLeftOf="@+id/buttonCancel"
+        android:text="Ok"
+        style="@style/Widget.AppCompat.Light.ActionButton"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

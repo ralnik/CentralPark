@@ -9,6 +9,8 @@ import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
 import java.text.DecimalFormat;
 
+import ru.ralnik.centralpark.R;
+
 @Entity(tableName = "flats")
 public class Flat implements Serializable {
     @PrimaryKey(autoGenerate = false)
@@ -48,10 +50,14 @@ public class Flat implements Serializable {
     @ColumnInfo(name = "planirovka")
     private String planirovka;          //ссылка на планировку
 
+    @ColumnInfo(name = "favorite")
+    private int favorite;
+
     public Flat(){
     }
 
-    public Flat(int nom_kv, int corpus, int etag, int comnat, Float ploshad, Float price, int status) {
+    public Flat(String id, int nom_kv, int corpus, int etag, int comnat, Float ploshad, Float price, int status) {
+        this.id = id;
         this.nom_kv = nom_kv;
         this.corpus = corpus;
         this.etag = etag;
@@ -142,6 +148,13 @@ public class Flat implements Serializable {
         this.planirovka = planirovka;
     }
 
+    public int getFavorite() {
+        return favorite;
+    }
+
+    public void setFavorite(int favorite) {
+        this.favorite = favorite;
+    }
 
     public static String makePrettyCost(String cost){
         long realcost=0;
@@ -174,8 +187,8 @@ public class Flat implements Serializable {
         return tempCost.replace(","," ");
     }
 
-    public static String setCorrectStatus(int status){
-        switch (status){
+    public String getCorrectStatus(){
+        switch (getStatus()){
             case 0:
                 return "Продано";
 
@@ -187,6 +200,23 @@ public class Flat implements Serializable {
 
             default:
                 return status+"";
+        }
+    }
+
+    public String getNameCountRoomsFlat(){
+        switch (getComnat()){
+            case 1:
+                return "ОДНОКОМНАТНАЯ КВАРТИРА";
+            case 2:
+                return "ДВУХКОМНАТНАЯ КВАРТИРА";
+            case 3:
+                return "ТРЕХКОМНАТНАЯ КВАРТИРА";
+            case 4:
+                return "ЧЕТЫРЕХКОМНАТНАЯ КВАРТИРА";
+            case 5:
+                return "ПЯТИКОМНАТНАЯ КВАРТИРА";
+            default:
+                return "";
         }
     }
 

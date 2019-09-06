@@ -10,15 +10,15 @@ import java.net.PasswordAuthentication;
 import java.net.ProtocolException;
 import java.net.URL;
 
+import ru.ralnik.model.Flat;
 
 
-public class HttpPlayer {
+public abstract class HttpPlayer {
 
     public String host = "192.168.1.103";
     public int port = 0;
     public String username = null;
     public String password = null;
-
 
     public HttpPlayer(String host, int port, String username, String password) {
         this.host = host.split(":")[0];
@@ -27,6 +27,18 @@ public class HttpPlayer {
         this.username = username;
         this.password = password;
     }
+
+
+    abstract void play();
+    abstract void stop();
+    abstract void selectById(int id);
+    abstract void selectBySubId(int id);
+    abstract void volume(int vol);
+    abstract void volumeEffect(int vol);
+    abstract void volumeOnOff();
+    abstract void setVolumeOnOff(int volumeOnOff);
+    abstract void setVolume(int volume);
+    abstract void setVolumeEffect(int volEffect);
 
 
 
@@ -79,9 +91,5 @@ public class HttpPlayer {
                 }
             }
         }).start();
-
-
     }
-
-
-    }
+}
