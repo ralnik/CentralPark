@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -44,6 +43,8 @@ public class FilterFragment extends Fragment {
 
     private Unbinder unbinder;
 
+    static final String KORPUS1_STATUS = "korpus1_Status";
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +67,7 @@ public class FilterFragment extends Fragment {
         buttonRoom3.setTag(3);
         buttonRoom4.setTag(4);
 
+
         buttonSearch.setOnDemonstrationButtonClickListener(new buttonSearchOnClick());
 
         sheet2.setOnClickListener(new View.OnClickListener() {
@@ -75,7 +77,8 @@ public class FilterFragment extends Fragment {
                 FragmentTransaction ft = fragmentManager.beginTransaction();
                 GenplanFragment genplanFragment = new GenplanFragment();
 
-                ft.replace(R.id.conteiner,genplanFragment, TagsFragment.TAG_4);
+                ft.add(R.id.conteiner,genplanFragment, TagsFragment.TAG_4);
+                ft.addToBackStack(null);
                 ft.commit();
             }
         });
@@ -89,7 +92,7 @@ public class FilterFragment extends Fragment {
         unbinder.unbind();
     }
 
-    /**
+   /**
      *
      *  PRIVATE CLASSES of Buttons Listener
      *
@@ -125,7 +128,7 @@ public class FilterFragment extends Fragment {
             FragmentTransaction ft = fragmentManager.beginTransaction();
             ResultTableFragment tableFragment = new ResultTableFragment(sql.toString());
 
-            ft.replace(R.id.conteiner,tableFragment, TagsFragment.TAG_2);
+            ft.add(R.id.conteiner,tableFragment, TagsFragment.TAG_2);
             ft.addToBackStack(null);
             ft.commit();
         }

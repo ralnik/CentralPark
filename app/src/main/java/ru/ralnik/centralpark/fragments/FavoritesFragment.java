@@ -15,7 +15,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import ru.ralnik.PDF.PDF_Creator;
 import ru.ralnik.centralpark.R;
+import ru.ralnik.centralpark.SendToEmailActivity;
 import ru.ralnik.myLibrary.NavigationButton.DemonsrationButton;
 import ru.ralnik.myLibrary.recycleview.FavoriteFlatsRecycleViewAdapter;
 import ru.ralnik.sqlitedb.FlatRepository;
@@ -48,6 +50,15 @@ public class FavoritesFragment extends Fragment {
             public void onClick(View v) {
                 new FlatRepository(context).deleteFavoriteAll();
                 loadFavoriteFlatsInRecycleView();
+            }
+        });
+
+        buttonSendToEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PDF_Creator pdf = new PDF_Creator(getContext(),"/storage/emulated/0/Download/1/flats_favorites.pdf");
+                pdf.create();
+                new SendToEmailActivity(getActivity());
             }
         });
 

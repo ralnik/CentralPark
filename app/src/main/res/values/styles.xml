@@ -15,13 +15,10 @@
         <item name="sbra_absoluteMinValue">0</item>
         <item name="sbra_bgEdits">@color/settings_color_edit</item>
         <item name="sbra_bgSeekbarRange">@drawable/seekbarrange_progress</item>
-        <item name="sbra_barColor">@color/barColor</item>
+        <item name="sbra_barColor">@android:color/transparent</item>
         <item name="sbra_data_type">_integer</item>
         <item name="sbra_edits_ems">5</item>
-        <item name="sbra_left_thumb_image">@drawable/image_thumb</item>
-        <item name="sbra_right_thumb_image">@drawable/image_thumb</item>
         <item name="sbra_textColorOfEdits">@color/colorTextTitle</item>
-        <item name="sbra_textSizeOfEdits">14</item>
     </style>
 
     <!-- For ROW_OF_TABLE -->
@@ -29,7 +26,7 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:gravity">center_horizontal|center</item>
         <item name="android:textColor">@color/color_text_header_of_table</item>
-        <item name="android:textSize">13sp</item>
+        <item name="android:textSize">@dimen/row_of_table_column_textSize</item>
         <item name="android:background">@color/color_header_of_table</item>
     </style>
 
@@ -37,8 +34,25 @@
     <style name="subtitle_flat_details">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">@dimen/fragment_flat_details_texts_about_flat_textSize</item>
         <item name="android:textColor">@color/color_text_flat_details</item>
+    </style>
+
+                <!-- for fragment_filter-->
+    <!--buttonsNumber-->
+    <style name="fragment_filter_buttonsKorpus">
+        <item name="android:layout_width">@dimen/fragment_filter_buttonsNumber_width</item>
+        <item name="android:layout_height">@dimen/fragment_filter_buttonsNumber_height</item>
+        <item name="android:layout_marginRight">@dimen/fragment_filter_buttonsNumber_marginRight</item>
+    </style>
+
+                 <!-- for fragment_settings-->
+    <!--buttonsNumber-->
+    <style name="fragment_settings_emailLabel">
+        <item name="android:layout_marginRight">@dimen/fragment_settings_emailLabel_marginRight</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/fragment_settings_titles_textSize</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
 </resources>

@@ -59,7 +59,7 @@ public class MyRecycleViewItemSelected implements OnItemClickListener {
 
         FlatDetailsFragment flatDetailsFragment = new FlatDetailsFragment(flat);
 
-        ft.replace(R.id.conteiner, flatDetailsFragment, TagsFragment.TAG_5);
+        ft.add(R.id.conteiner, flatDetailsFragment, TagsFragment.TAG_5);
         ft.addToBackStack(null);
         ft.commit();
     }

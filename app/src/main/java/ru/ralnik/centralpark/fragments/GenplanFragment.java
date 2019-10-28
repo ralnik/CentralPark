@@ -33,7 +33,8 @@ public class GenplanFragment extends Fragment {
                 FragmentTransaction ft = fragmentManager.beginTransaction();
                 FilterFragment filterFragment = new FilterFragment();
 
-                ft.replace(R.id.conteiner,filterFragment, TagsFragment.TAG_1);
+                ft.add(R.id.conteiner,filterFragment, TagsFragment.TAG_1);
+                ft.addToBackStack(null);
                 ft.commit();
             }
         });

@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
             FragmentTransaction ft = fragmentManager.beginTransaction();
             SettingsFragment settingsFragment = new SettingsFragment();
 
-            ft.replace(R.id.conteiner,settingsFragment,TagsFragment.TAG_3);
+            ft.add(R.id.conteiner,settingsFragment,TagsFragment.TAG_3);
             ft.addToBackStack(null);
             ft.commit();
         }

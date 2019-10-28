@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import ru.ralnik.config.myConfig;
 import ru.ralnik.email.EmailSender;
 
 public class SendToEmailActivity {
@@ -30,10 +31,13 @@ public class SendToEmailActivity {
     String to;
     String attach;
 
+    myConfig cfg;
+
     public SendToEmailActivity(Activity activity) {
         this.activity = activity;
         rootView = activity.getLayoutInflater().inflate(R.layout.send_to_email_layout, null); // Получаем layout по его ID
         ButterKnife.bind(this,rootView);
+        cfg = new myConfig(activity.getApplicationContext());
         //initialize all components
         init();
         // show activity
@@ -126,11 +130,11 @@ public class SendToEmailActivity {
 
                 title = "title";
                 text = "text";
-                from = "user@mail.ru";
+                from = cfg.getEmailFrom();
                 to = email_edit.getText().toString();
                 attach = "/storage/emulated/0/Download/1/sample.pdf";
                 publishProgress("Sending email....");
-                EmailSender sender = new EmailSender("user@mail.ru", "xxxxxxxx");
+                EmailSender sender = new EmailSender(cfg.getEmailLogin(), cfg.getEmailPassword(), cfg.getSmtp());
                 sender.sendMail(title, text, from, to, attach);
 
             } catch (Exception e) {

@@ -34,6 +34,10 @@ public class SettingsFragment extends Fragment {
     @BindView(R.id.editIP) EditText editIP;
     @BindView(R.id.buttonSave) ImageView buttonSave;
     @BindView(R.id.buttonUpdateDB) ImageView buttonUpdateDB;
+    @BindView(R.id.smtpEdit) EditText editSMTP;
+    @BindView(R.id.emailFromEdit) EditText editEmail;
+    @BindView(R.id.emailLoginEdit) EditText editEmailLogin;
+    @BindView(R.id.emailPasswordEdit) EditText editEmailPassword;
     private Unbinder unbinder;
     private Context context;
     private myConfig cfg;
@@ -71,6 +75,11 @@ public class SettingsFragment extends Fragment {
         }else {
             switcherTimer.setStatus(false);
         }
+
+        editSMTP.setText(cfg.getSmtp());
+        editEmail.setText(cfg.getEmailFrom());
+        editEmailLogin.setText(cfg.getEmailLogin());
+        editEmailPassword.setText(cfg.getEmailPassword());
 
         return root;
     }
@@ -116,6 +125,11 @@ public class SettingsFragment extends Fragment {
             cfg.setEffectProgress(String.valueOf(effectSeekbar.getProgress()));
 
             cfg.setTimer(String.valueOf(editWaitTime.getText()));
+
+            cfg.setSmtp(editSMTP.getText().toString());
+            cfg.setEmailFrom(editEmail.getText().toString());
+            cfg.setEmailLogin(editEmailLogin.getText().toString());
+            cfg.setEmailPassword(editEmailPassword.getText().toString());
             /*
             вот с этим нужно подумать как сделать чтобы счетчик врубился на главной форме, как то передать туда параметр
             setTimer(cfg.getTimer());

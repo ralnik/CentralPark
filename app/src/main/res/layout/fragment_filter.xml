@@ -49,7 +49,7 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageView
-        android:layout_width="2dp"
+        android:layout_width="1dp"
         android:layout_height="0dp"
         android:src="@drawable/line"
         android:scaleType="fitXY"
@@ -58,7 +58,7 @@
         app:layout_constraintBottom_toBottomOf="parent"/>
 
         <ImageView
-            android:layout_width="2dp"
+            android:layout_width="1dp"
             android:layout_height="0dp"
             android:src="@drawable/line"
             android:scaleType="fitXY"
@@ -217,9 +217,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/fragment_filter_footerLayout_marginLeft"
             android:layout_marginRight="@dimen/fragment_filter_footerLayout_marginRight"
-            android:layout_marginTop="@dimen/fragment_filter_footerLayout_marginBottom"
+            android:layout_marginBottom="@dimen/fragment_filter_footerLayout_marginBottom"
             app:layout_constraintBottom_toBottomOf="parent">
-            <!--app:layout_constraintTop_toBottomOf="@+id/scrollView">-->
+
 
             <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
                 android:id="@+id/buttonClear"

@@ -5,12 +5,14 @@
     <color name="colorAccent">#D81B60</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
+    <color name="colorLineBackgroud">#59886d</color>
 
 
     <color name="colorTextTitle">#000000</color>
 
     <!--SeekBar-->
     <color name="seekbar_highlight_progress_color">#5a886c</color>
+    <color name="seekbar_thumb_color">#5a886c</color>
     <color name="barColor">#FFFFFF</color>
     <color name="settings_color_edit">#F1F4EB</color>
 

@@ -1,61 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+                    <!--for activity_main-->
+    <!-- tabSheetsLayout -->
+    <dimen name="activity_main_tabSheetsLayout_marginTop">22dp</dimen>
+    <dimen name="activity_main_tabSheetsLayout_marginLeft">16dp</dimen>
+    <dimen name="activity_main_tabSheetsLayout_marginRight">16dp</dimen>
+    <dimen name="activity_main_tabSheetsLayout_header_heigth">16dp</dimen>
     <!-- controlLayout -->
-    <dimen name="controlLayout_marginLeft">16dp</dimen>
-    <dimen name="controlLayout_marginTop">16dp</dimen>
+    <dimen name="activity_main_controlLayout_marginLeft">16dp</dimen>
+    <dimen name="activity_main_controlLayout_marginTop">16dp</dimen>
 
     <!-- controlButton -->
-    <dimen name="controlButton_margin_between_buttons">10dp</dimen>
-    <dimen name="controlButton_size">21dp</dimen>
+    <dimen name="activity_main_controlButton_margin_between_buttons">10dp</dimen>
+    <dimen name="activity_main_controlButton_size">21dp</dimen>
 
     <!-- demonstrationButtonLayout -->
-    <dimen name="demonstrationButtonLayout_rigth">32dp</dimen>
-    <dimen name="demonstrationButtonLayout_left">32dp</dimen>
-    <dimen name="demonstrationButtonLayout_top">42dp</dimen>
+    <dimen name="activity_main_demonstrationButtonLayout_rigth">16dp</dimen>
+    <dimen name="activity_main_demonstrationButtonLayout_left">16dp</dimen>
+    <dimen name="activity_main_demonstrationButtonLayout_top">42dp</dimen>
 
     <!-- demonsrationButtons -->
-    <dimen name="demonstrationButton_marginRight_between_buttons">3dp</dimen>
-    <dimen name="demonstrationButton_marginTop_between_buttons">3dp</dimen>
-    <dimen name="demonstrationButton_width">85dp</dimen>
-    <dimen name="demonstrationButton_height">23dp</dimen>
+    <dimen name="activity_main_demonstrationButton_marginRight_between_buttons">3dp</dimen>
+    <dimen name="activity_main_demonstrationButton_marginTop_between_buttons">3dp</dimen>
+    <dimen name="activity_main_demonstrationButton_width">85dp</dimen>
+    <dimen name="activity_main_demonstrationButton_height">23dp</dimen>
 
-    <!-- tabSheetsLayout -->
-    <dimen name="tabSheetsLayout_marginTop">22dp</dimen>
-    <dimen name="tabSheetsLayout_marginLeft">16dp</dimen>
-    <dimen name="tabSheetsLayout_marginRight">16dp</dimen>
-    <dimen name="tabSheetsLayout_header_heigth">16dp</dimen>
-
-    <!-- filterLayout -->
-    <dimen name="filterLayout_marginTop">50dp</dimen>
-    <dimen name="filterLayout_marginLeft">45dp</dimen>
-    <dimen name="filterLayout_marginRight">45dp</dimen>
-    <dimen name="filterLayout_marginTop_between_layouts">20dp</dimen>
-    <dimen name="filterLayout_marginBotton_between_layouts">20dp</dimen>
 
     <!-- buttonsNumber -->
-    <dimen name="buttonsNumber_width">53dp</dimen>
-    <dimen name="buttonsNumber_height">53dp</dimen>
-    <dimen name="buttonsNumber_margin_between_buttons">17dp</dimen>
+    <dimen name="activity_main_buttonsNumber_width">53dp</dimen>
+    <dimen name="activity_main_buttonsNumber_height">53dp</dimen>
+    <dimen name="activity_main_buttonsNumber_margin_between_buttons">17dp</dimen>
 
-    <!-- buttonsSearching -->
-    <dimen name="buttonsSearching_width">172dp</dimen>
-    <dimen name="buttonsSearching_height">48dp</dimen>
+               <!-- FOR activity_preloading -->
+    <!-- label -->
+    <dimen name="label_width">140dp</dimen>
+    <dimen name="label_height">74dp</dimen>
 
-    <!--for buttons from send_to_email_layout -->
-    <dimen name="sendLayout_marginLeft">20dp</dimen>
-    <dimen name="sendLayout_marginRight">20dp</dimen>
-    <dimen name="sendLayout_marginTop">18dp</dimen>
-    <dimen name="button_send_to_email_width">86dp</dimen>
-    <dimen name="button_send_to_email_height">24dp</dimen>
+                <!-- FOR favorite_item_layout -->
+    <dimen name="favorite_item_height">50dp</dimen>
+    <dimen name="favorite_item_checkbox_width">11dp</dimen>
+    <dimen name="favorite_item_checkbox_height">11dp</dimen>
+    <dimen name="favorite_item_checkbox_marginLeft">45dp</dimen>
+    <dimen name="favorite_item_titles_textSize">7sp</dimen>
+    <dimen name="favorite_item_buttonDelete_width">22dp</dimen>
+    <dimen name="favorite_item_buttonDelete_height">22dp</dimen>
+    <dimen name="favorite_item_imagePlan_marginTop">13dp</dimen>
+    <dimen name="favorite_item_imagePlan_marginBottom">13dp</dimen>
+    <dimen name="favorite_item_buttonDelete_marginRight">13dp</dimen>
+    <dimen name="favorite_item_height_BottomBorder">1dp</dimen>
 
+                <!-- for fragment_favorites-->
+    <dimen name="fragment_favorites_recycleview_marginTop">5dp</dimen>
+    <dimen name="fragment_favorites_recycleview_marginLeft">23dp</dimen>
+    <dimen name="fragment_favorites_recycleview_marginRight">23dp</dimen>
+    <dimen name="fragment_favorites_footerpanel_marginBottom">45dp</dimen>
+    <dimen name="fragment_favorites_buttonClear_width">86dp</dimen>
+    <dimen name="fragment_favorites_buttonClear_height">24dp</dimen>
+    <dimen name="fragment_favorites_buttonClear_marginLeft">23dp</dimen>
+    <dimen name="fragment_favorites_buttonSendToEmail_width">86dp</dimen>
+    <dimen name="fragment_favorites_buttonSendToEmail_height">24dp</dimen>
+    <dimen name="fragment_favorites_buttonSendToEmail_marginRight">23dp</dimen>
+
+                <!-- for fragment_filter-->
+    <!-- tabSheetsLayout -->
+    <dimen name="fragment_filter_tabSheetsLayout_marginTop">22dp</dimen>
+    <dimen name="fragment_filter_tabSheetsLayout_marginLeft">16dp</dimen>
+    <dimen name="fragment_filter_tabSheetsLayout_marginRight">16dp</dimen>
+    <dimen name="fragment_filter_tabSheetsLayout_header_heigth">16dp</dimen>
+
+    <!--filterLayout-->
+    <dimen name="fragment_filter_filterLayout_marginTop">10dp</dimen>
+    <dimen name="fragment_filter_filterLayout_marginLeft">23dp</dimen>
+    <dimen name="fragment_filter_filterLayout_marginRight">23dp</dimen>
+    <dimen name="fragment_filter_filterLayout_marginTop_between_layouts">10dp</dimen>
+    <dimen name="fragment_filter_filterLayout_marginBotton_between_layouts">10dp</dimen>
+    <!-- buttonsNumber -->
+    <dimen name="fragment_filter_buttonsNumber_width">26dp</dimen>
+    <dimen name="fragment_filter_buttonsNumber_height">26dp</dimen>
+    <dimen name="fragment_filter_buttonsNumber_marginRight">8dp</dimen>
+    <!-- footerLayout -->
+    <dimen name="fragment_filter_footerLayout_marginBottom">15dp</dimen>
+    <dimen name="fragment_filter_footerLayout_marginLeft">23dp</dimen>
+    <dimen name="fragment_filter_footerLayout_marginRight">23dp</dimen>
+    <!--buttonClear-->
+    <dimen name="fragment_filter_buttonClear_width">86dp</dimen>
+    <dimen name="fragment_filter_buttonClear_height">24dp</dimen>
+    <!--buttonSearch-->
+    <dimen name="fragment_filter_buttonSearch_width">86dp</dimen>
+    <dimen name="fragment_filter_buttonSearch_height">24dp</dimen>
+    <!--seekbarRangeAdvance-->
+    <dimen name="fragment_filter_seekbarRangeAdvance_textSizeOfEdits">7</dimen>
+
+    <!--for fragment_flat_details-->
+    <!-- tabSheetsLayout -->
+    <dimen name="fragment_flat_details_tabSheetsLayout_header_heigth">25dp</dimen>
+    <!--ll_details-->
+    <dimen name="fragment_flat_details_ll_details_marginTop">5dp</dimen>
+    <dimen name="fragment_flat_details_ll_details_marginLeft">23dp</dimen>
+    <dimen name="fragment_flat_details_ll_details_marginRight">23dp</dimen>
+    <!--buttonStar-->
+    <dimen name="fragment_flat_details_buttonStar_width">19dp</dimen>
+    <dimen name="fragment_flat_details_buttonStar_heigth">19dp</dimen>
+    <!--imgPlanFloor-->
+    <dimen name="fragment_flat_details_imgPlanFloor_width">65dp</dimen>
+    <dimen name="fragment_flat_details_imgPlanFloor_heigth">65dp</dimen>
+    <!--titleCountRooms-->
+    <dimen name="fragment_flat_details_titleCountRooms_marginTop">19dp</dimen>
+    <dimen name="fragment_flat_details_titleCountRooms_textSize">15sp</dimen>
+    <!--for all texts_about_flat-->
+    <dimen name="fragment_flat_details_texts_about_flat_marginBottom">7dp</dimen>
+    <dimen name="fragment_flat_details_texts_about_flat_textSize">9sp</dimen>
+    <!--buttonShowFavorites-->
+    <dimen name="fragment_flat_details_buttonShowFavorites_width">86dp</dimen>
+    <dimen name="fragment_flat_details_buttonShowFavorites_heigth">24dp</dimen>
+    <!--buttonSendToEmail-->
+    <dimen name="fragment_flat_details_buttonSendToEmail_width">86dp</dimen>
+    <dimen name="fragment_flat_details_buttonSendToEmail_heigth">24dp</dimen>
+
+    <!--for fragment_genplan-->
+    <!-- tabSheetsLayout -->
+    <dimen name="fragment_genplan_tabSheetsLayout_header_heigth">25dp</dimen>
+    <!--detailsLayout-->
+    <dimen name="fragment_flat_details_detailsLayout_marginTop">35dp</dimen>
+    <dimen name="fragment_flat_details_detailsLayout_marginLeft">23dp</dimen>
+    <dimen name="fragment_flat_details_detailsLayout_marginRight">23dp</dimen>
+
+                <!--for fragment_result_table-->
+    <!-- tabSheetsLayout -->
+    <dimen name="fragment_result_table_tabSheetsLayout_header_heigth">25dp</dimen>
+    <!--detailsLayout-->
+    <dimen name="fragment_result_table_detailsLayout_marginTop">5dp</dimen>
+    <dimen name="fragment_result_table_detailsLayout_marginLeft">7dp</dimen>
+    <dimen name="fragment_result_table_detailsLayout_marginRight">7dp</dimen>
+
+                 <!--for row_of_table-->
     <!-- for ROW-of-Table -->
-    <dimen name="row_height">36dp</dimen>
-    <dimen name="column1_width">78dp</dimen>
-    <dimen name="column2_width">78dp</dimen>
-    <dimen name="column3_width">78dp</dimen>
-    <dimen name="column4_width">114dp</dimen>
-    <dimen name="column5_width">114dp</dimen>
-    <dimen name="column6_width">117dp</dimen>
-    <dimen name="column7_width">111dp</dimen>
+    <dimen name="row_of_table_row_height">18dp</dimen>
+    <dimen name="row_of_table_column1_width">39dp</dimen>
+    <dimen name="row_of_table_column2_width">39dp</dimen>
+    <dimen name="row_of_table_column3_width">39dp</dimen>
+    <dimen name="row_of_table_column4_width">57dp</dimen>
+    <dimen name="row_of_table_column5_width">57dp</dimen>
+    <dimen name="row_of_table_column6_width">58dp</dimen>
+    <dimen name="row_of_table_column7_width">55dp</dimen>
+    <dimen name="row_of_table_column_textSize">7sp</dimen>
 
+                <!--for prompt-->
+    <!--mainLayout-->
+    <dimen name="mainLayout_padding">5dp</dimen>
+    <!--buttonApply-->
+    <dimen name="mainLayout_buttonApply_marginRight">5dp</dimen>
+
+                <!--for send_to_email_layout-->
+    <dimen name="send_to_email_layout_sendLayout_marginLeft">20dp</dimen>
+    <dimen name="send_to_email_layout_sendLayout_marginRight">20dp</dimen>
+    <dimen name="send_to_email_layout_sendLayout_marginTop">18dp</dimen>
+    <dimen name="send_to_email_layout_button_send_to_email_width">86dp</dimen>
+    <dimen name="send_to_email_layout_button_send_to_email_height">24dp</dimen>
+    <dimen name="send_to_email_layout_edit_textSize">9sp</dimen>
+    <dimen name="send_to_email_layout_footerLayout_marginTop">18dp</dimen>
+
+                <!--for fragment_settings-->
+    <!--detailsLayout-->
+    <dimen name="fragment_settings_detailsLayout_marginTop">5dp</dimen>
+    <dimen name="fragment_settings_detailsLayout_marginLeft">23dp</dimen>
+    <dimen name="fragment_settings_detailsLayout_marginRight">23dp</dimen>
+    <!--titles-->
+    <dimen name="fragment_settings_titles_textSize">7sp</dimen>
+    <dimen name="fragment_settings_titles_marginTop">20dp</dimen>
+    <dimen name="fragment_settings_titles_marginRight">20dp</dimen>
+    <!--seekbar-->
+    <dimen name="fragment_settings_seekbar_height">20dp</dimen>
+    <dimen name="fragment_settings_seekbar_marginTop">9dp</dimen>
+    <!--timeWaitLayout-->
+    <dimen name="fragment_settings_timeWaitLayout_marginTop">20dp</dimen>
+    <!--switcherTimer-->
+    <dimen name="fragment_settings_switcherTimer_width">51dp</dimen>
+    <dimen name="fragment_settings_switcherTimer_height">14dp</dimen>
+    <!--textAttention-->
+    <dimen name="fragment_settings_textAttention_marginTop">9dp</dimen>
+    <!--serverIPLayout-->
+    <dimen name="fragment_settings_serverIPLayout_marginTop">9dp</dimen>
+    <!--serverIPTitle-->
+    <dimen name="fragment_settings_serverIPTitle_marginRight">6dp</dimen>
+    <!--emailLayout-->
+    <dimen name="fragment_settings_emailLayout_marginTop">6dp</dimen>
+    <!--emailLabel-->
+    <dimen name="fragment_settings_emailLabel_marginRight">6dp</dimen>
+    <!--emailEdit-->
+    <dimen name="fragment_settings_emailEdit_textSize">7sp</dimen>
+    <!--footer-->
+    <dimen name="fragment_settings_footer_marginRight">23dp</dimen>
+    <dimen name="fragment_settings_footer_marginLeft">23dp</dimen>
+    <dimen name="fragment_settings_footer_marginBottom">10dp</dimen>
+    <!--buttonSave-->
+    <dimen name="fragment_settings_buttonSave_width">88dp</dimen>
+    <dimen name="fragment_settings_buttonSave_height">21dp</dimen>
+    <!--buttonUpdateDB-->
+    <dimen name="fragment_settings_buttonUpdateDB_width">88dp</dimen>
+    <dimen name="fragment_settings_buttonUpdateDB_height">21dp</dimen>
 </resources>

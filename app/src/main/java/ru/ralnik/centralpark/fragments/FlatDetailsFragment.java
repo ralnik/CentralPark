@@ -17,6 +17,9 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
@@ -79,7 +82,7 @@ public class FlatDetailsFragment extends Fragment {
                 FragmentTransaction ft = fragmentManager.beginTransaction();
                 GenplanFragment genplanFragment = new GenplanFragment();
 
-                ft.replace(R.id.conteiner,genplanFragment, TagsFragment.TAG_4);
+                ft.add(R.id.conteiner,genplanFragment, TagsFragment.TAG_4);
                 ft.commit();
             }
         });
@@ -147,7 +150,7 @@ public class FlatDetailsFragment extends Fragment {
             FragmentTransaction ft = fragmentManager.beginTransaction();
             FavoritesFragment favoritesFragment = new FavoritesFragment();
 
-            ft.replace(R.id.conteiner,favoritesFragment,TagsFragment.TAG_6);
+            ft.add(R.id.conteiner,favoritesFragment,TagsFragment.TAG_6);
             ft.addToBackStack(null);
             ft.commit();
         }
@@ -156,7 +159,9 @@ public class FlatDetailsFragment extends Fragment {
     private class buttonSendToEmailOnClick implements OnDemonstrationButtonClickListener{
         @Override
         public void onClick(View view) {
-            PDF_Creator pdf = new PDF_Creator(getContext(),"/storage/emulated/0/Download/1/");
+            List<Flat> listFlat = new ArrayList<>();
+            listFlat.add(flat);
+            PDF_Creator pdf = new PDF_Creator(getContext(),"/storage/emulated/0/Download/1/flats_favorites.pdf",listFlat);
             pdf.create();
             new SendToEmailActivity(getActivity());
 

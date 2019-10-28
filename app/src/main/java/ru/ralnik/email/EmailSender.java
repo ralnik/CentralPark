@@ -33,7 +33,7 @@ public class EmailSender extends javax.mail.Authenticator{
         Security.addProvider(new ru.ralnik.email.JSSEProvider());
     }
 
-    public EmailSender(String user, String password) {
+    public EmailSender(String user, String password, String smtp) {
         this.user = user;
         this.password = password;
 

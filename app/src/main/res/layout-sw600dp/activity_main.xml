@@ -16,31 +16,31 @@
         android:layout_height="wrap_content"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="@dimen/controlLayout_marginTop"
-        android:layout_marginEnd="@dimen/controlLayout_marginLeft"
+        android:layout_marginTop="@dimen/activity_main_controlLayout_marginTop"
+        android:layout_marginEnd="@dimen/activity_main_controlLayout_marginLeft"
         tools:ignore="MissingConstraints">
 
     <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
         android:id="@+id/buttonPause"
-        android:layout_width="@dimen/controlButton_size"
-        android:layout_height="@dimen/controlButton_size"
+        android:layout_width="@dimen/activity_main_controlButton_size"
+        android:layout_height="@dimen/activity_main_controlButton_size"
         app:demo_image="@drawable/main_pause_clear"
         app:demo_image_down="@drawable/main_pause_push"
-        android:layout_marginEnd="@dimen/controlButton_margin_between_buttons"/>
+        android:layout_marginEnd="@dimen/activity_main_controlButton_margin_between_buttons"/>
 
     <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
         android:id="@+id/buttonVolume"
-        android:layout_width="@dimen/controlButton_size"
-        android:layout_height="@dimen/controlButton_size"
+        android:layout_width="@dimen/activity_main_controlButton_size"
+        android:layout_height="@dimen/activity_main_controlButton_size"
         app:demo_image="@drawable/main_sound_clear"
         app:demo_image_down="@drawable/main_sound_push"
         android:layout_toRightOf="@+id/buttonPause"
-        android:layout_marginEnd="@dimen/controlButton_margin_between_buttons"/>
+        android:layout_marginEnd="@dimen/activity_main_controlButton_margin_between_buttons"/>
 
     <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
         android:id="@+id/buttonOption"
-        android:layout_width="@dimen/controlButton_size"
-        android:layout_height="@dimen/controlButton_size"
+        android:layout_width="@dimen/activity_main_controlButton_size"
+        android:layout_height="@dimen/activity_main_controlButton_size"
         app:demo_image="@drawable/main_options_clear"
         app:demo_image_down="@drawable/main_options_push"
         android:layout_toRightOf="@+id/buttonVolume"/>
@@ -51,17 +51,17 @@
         android:id="@+id/demonstrationButtonLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/demonstrationButtonLayout_left"
-        android:layout_marginTop="@dimen/demonstrationButtonLayout_top"
-        android:layout_marginRight="@dimen/demonstrationButtonLayout_rigth"
+        android:layout_marginLeft="@dimen/activity_main_demonstrationButtonLayout_left"
+        android:layout_marginTop="@dimen/activity_main_demonstrationButtonLayout_top"
+        android:layout_marginRight="@dimen/activity_main_demonstrationButtonLayout_rigth"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/controlLayout">
 
         <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
             android:id="@+id/buttonLifeIsland"
-            android:layout_width="@dimen/demonstrationButton_width"
-            android:layout_height="@dimen/demonstrationButton_height"
+            android:layout_width="@dimen/activity_main_demonstrationButton_width"
+            android:layout_height="@dimen/activity_main_demonstrationButton_height"
             app:demo_image="@drawable/main_01_clear"
             app:demo_image_down="@drawable/main_01_push"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -69,9 +69,9 @@
 
         <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
             android:id="@+id/buttonLocation"
-            android:layout_width="@dimen/demonstrationButton_width"
-            android:layout_height="@dimen/demonstrationButton_height"
-            android:layout_marginLeft="@dimen/demonstrationButton_marginRight_between_buttons"
+            android:layout_width="@dimen/activity_main_demonstrationButton_width"
+            android:layout_height="@dimen/activity_main_demonstrationButton_height"
+            android:layout_marginLeft="@dimen/activity_main_demonstrationButton_marginRight_between_buttons"
             app:demo_image="@drawable/main_02_clear"
             app:demo_image_down="@drawable/main_02_push"
             app:layout_constraintLeft_toRightOf="@+id/buttonLifeIsland"
@@ -79,9 +79,9 @@
 
         <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
             android:id="@+id/buttonInfraRaion"
-            android:layout_width="@dimen/demonstrationButton_width"
-            android:layout_height="@dimen/demonstrationButton_height"
-            android:layout_marginLeft="@dimen/demonstrationButton_marginRight_between_buttons"
+            android:layout_width="@dimen/activity_main_demonstrationButton_width"
+            android:layout_height="@dimen/activity_main_demonstrationButton_height"
+            android:layout_marginLeft="@dimen/activity_main_demonstrationButton_marginRight_between_buttons"
             app:demo_image="@drawable/main_03_clear"
             app:demo_image_down="@drawable/main_03_push"
             app:layout_constraintLeft_toRightOf="@+id/buttonLocation"
@@ -89,9 +89,9 @@
 
         <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
             android:id="@+id/buttonPerspective"
-            android:layout_width="@dimen/demonstrationButton_width"
-            android:layout_height="@dimen/demonstrationButton_height"
-            android:layout_marginLeft="@dimen/demonstrationButton_marginRight_between_buttons"
+            android:layout_width="@dimen/activity_main_demonstrationButton_width"
+            android:layout_height="@dimen/activity_main_demonstrationButton_height"
+            android:layout_marginLeft="@dimen/activity_main_demonstrationButton_marginRight_between_buttons"
             app:demo_image="@drawable/main_04_clear"
             app:demo_image_down="@drawable/main_04_push"
             app:layout_constraintLeft_toRightOf="@+id/buttonInfraRaion"
@@ -99,9 +99,9 @@
 
         <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
             android:id="@+id/buttonTransport"
-            android:layout_width="@dimen/demonstrationButton_width"
-            android:layout_height="@dimen/demonstrationButton_height"
-            android:layout_marginTop="@dimen/demonstrationButton_marginTop_between_buttons"
+            android:layout_width="@dimen/activity_main_demonstrationButton_width"
+            android:layout_height="@dimen/activity_main_demonstrationButton_height"
+            android:layout_marginTop="@dimen/activity_main_demonstrationButton_marginTop_between_buttons"
             app:demo_image="@drawable/main_05_clear"
             app:demo_image_down="@drawable/main_05_push"
             app:layout_constraintStart_toStartOf="parent"
@@ -109,10 +109,10 @@
 
         <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
             android:id="@+id/buttonInfra"
-            android:layout_width="@dimen/demonstrationButton_width"
-            android:layout_height="@dimen/demonstrationButton_height"
-            android:layout_marginLeft="@dimen/demonstrationButton_marginRight_between_buttons"
-            android:layout_marginTop="@dimen/demonstrationButton_marginTop_between_buttons"
+            android:layout_width="@dimen/activity_main_demonstrationButton_width"
+            android:layout_height="@dimen/activity_main_demonstrationButton_height"
+            android:layout_marginLeft="@dimen/activity_main_demonstrationButton_marginRight_between_buttons"
+            android:layout_marginTop="@dimen/activity_main_demonstrationButton_marginTop_between_buttons"
             app:demo_image="@drawable/main_06_clear"
             app:demo_image_down="@drawable/main_06_push"
             app:layout_constraintLeft_toRightOf="@+id/buttonTransport"
@@ -120,10 +120,10 @@
 
         <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
             android:id="@+id/buttonComfort"
-            android:layout_width="@dimen/demonstrationButton_width"
-            android:layout_height="@dimen/demonstrationButton_height"
-            android:layout_marginLeft="@dimen/demonstrationButton_marginRight_between_buttons"
-            android:layout_marginTop="@dimen/demonstrationButton_marginTop_between_buttons"
+            android:layout_width="@dimen/activity_main_demonstrationButton_width"
+            android:layout_height="@dimen/activity_main_demonstrationButton_height"
+            android:layout_marginLeft="@dimen/activity_main_demonstrationButton_marginRight_between_buttons"
+            android:layout_marginTop="@dimen/activity_main_demonstrationButton_marginTop_between_buttons"
             app:demo_image="@drawable/main_07_clear"
             app:demo_image_down="@drawable/main_07_push"
             app:layout_constraintLeft_toRightOf="@+id/buttonInfra"
@@ -131,10 +131,10 @@
 
         <ru.ralnik.myLibrary.NavigationButton.DemonsrationButton
             android:id="@+id/buttonArchitecture"
-            android:layout_width="@dimen/demonstrationButton_width"
-            android:layout_height="@dimen/demonstrationButton_height"
-            android:layout_marginLeft="@dimen/demonstrationButton_marginRight_between_buttons"
-            android:layout_marginTop="@dimen/demonstrationButton_marginTop_between_buttons"
+            android:layout_width="@dimen/activity_main_demonstrationButton_width"
+            android:layout_height="@dimen/activity_main_demonstrationButton_height"
+            android:layout_marginLeft="@dimen/activity_main_demonstrationButton_marginRight_between_buttons"
+            android:layout_marginTop="@dimen/activity_main_demonstrationButton_marginTop_between_buttons"
             app:demo_image="@drawable/main_07_clear"
             app:demo_image_down="@drawable/main_07_push"
             app:layout_constraintLeft_toRightOf="@+id/buttonComfort"
@@ -145,13 +145,15 @@
     <FrameLayout
         android:id="@+id/conteiner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@id/demonstrationButtonLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="@dimen/tabSheetsLayout_marginTop"
-        android:layout_marginLeft="@dimen/tabSheetsLayout_marginLeft"
-        android:layout_marginRight="@dimen/tabSheetsLayout_marginRight">
+        android:measureAllChildren="false"
+        android:layout_marginTop="@dimen/activity_main_tabSheetsLayout_marginTop"
+        android:layout_marginLeft="@dimen/activity_main_tabSheetsLayout_marginLeft"
+        android:layout_marginRight="@dimen/activity_main_tabSheetsLayout_marginRight">
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 

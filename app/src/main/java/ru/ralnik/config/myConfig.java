@@ -31,6 +31,10 @@ public class myConfig {
     private String APP_PREF_MAXBUDGET = "maxBudget";
 
     private String APP_PREF_EMAIL = "email";
+    private String APP_PREF_SMTP = "smptServer";
+    private String APP_PREF_EMAIL_FROM = "emailFrom";
+    private String APP_PREF_EMAIL_LOGIN = "emailLogin";
+    private String APP_PREF_EMAIL_PASSWORD = "emailPassword";
 
     public myConfig(Context context){
         mSettings = context.getSharedPreferences(APP_PREF_FILE, Context.MODE_PRIVATE);
@@ -47,6 +51,54 @@ public class myConfig {
     public void setEmail(String email) {
         editor.putString(APP_PREF_EMAIL,email);
         editor.apply();
+    }
+
+    public void setSmtp(String smtp){
+        editor.putString(APP_PREF_SMTP,smtp);
+        editor.apply();
+    }
+
+    public String getSmtp(){
+        if(mSettings.contains(APP_PREF_SMTP)){
+            return mSettings.getString(APP_PREF_SMTP, "smtp.mail.ru");
+        }
+        return "";
+    }
+
+    public void setEmailFrom(String email){
+        editor.putString(APP_PREF_EMAIL_FROM,email);
+        editor.apply();
+    }
+
+    public String getEmailFrom(){
+        if(mSettings.contains(APP_PREF_EMAIL_FROM)){
+            return mSettings.getString(APP_PREF_EMAIL_FROM, "ralnik@mail.ru");
+        }
+        return "";
+    }
+
+    public void setEmailLogin(String login){
+        editor.putString(APP_PREF_EMAIL_LOGIN,login);
+        editor.apply();
+    }
+
+    public String getEmailLogin(){
+        if(mSettings.contains(APP_PREF_EMAIL_LOGIN)){
+            return mSettings.getString(APP_PREF_EMAIL_LOGIN, "ralnik@mail.ru");
+        }
+        return "";
+    }
+
+    public void setEmailPassword(String password){
+        editor.putString(APP_PREF_EMAIL_PASSWORD,password);
+        editor.apply();
+    }
+
+    public String getEmailPassword(){
+        if(mSettings.contains(APP_PREF_EMAIL_PASSWORD)){
+            return mSettings.getString(APP_PREF_EMAIL_PASSWORD, "12345678");
+        }
+        return "";
     }
 
     private SharedPreferences mSettings;

@@ -62,23 +62,24 @@ public class PDF_Creator {
 
     public void create(){
 
+        File dir = new File(new File(filename).getAbsolutePath());
+        File file = new File(filename);
 
-// create a new document
+        if(!dir.exists())
+            dir.mkdirs();
+
+        //delete file if exitst
+        if(file.exists()){
+            file.delete();
+        }
+
+        // create a new document
         Document document = new Document(PageSize.A4);
         BaseFont baseFont = loadBaseFont("/assets/fonts/arial.ttf");
         Font font = new Font(baseFont, 16, Font.NORMAL, BaseColor.BLACK);
 
         try {
-            String path = "/sdcard/Download/1";
 
-            File dir = new File(path);
-            if(!dir.exists())
-                dir.mkdirs();
-
-            Log.d("PDFCreator", "PDF Path: " + path);
-
-
-            File file = new File(dir, "sample.pdf");
             FileOutputStream fOut = new FileOutputStream(file);
 
             PdfWriter.getInstance(document, fOut);
@@ -88,8 +89,6 @@ public class PDF_Creator {
 
 
             for (Flat flat : listFlat) {
-
-
                 ByteArrayOutputStream stream = new ByteArrayOutputStream();
                 Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.plan_flat100_floor6_corpus1);
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
